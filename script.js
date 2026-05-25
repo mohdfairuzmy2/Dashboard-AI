@@ -562,11 +562,15 @@ function renderNationalStatistics() {
 }
 
 function updateTimestamp() {
+  const lastUpdated = document.getElementById("lastUpdated");
   const formatter = new Intl.DateTimeFormat("ms-MY", {
     dateStyle: "medium",
     timeStyle: "short",
   });
-  document.getElementById("lastUpdated").textContent = `Dikemaskini: ${formatter.format(new Date())}`;
+
+  if (lastUpdated) {
+    lastUpdated.textContent = `Dikemaskini: ${formatter.format(new Date())}`;
+  }
 }
 
 function escapeHtml(value) {
@@ -772,5 +776,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSegments();
   renderRisks();
 
-  document.getElementById("exportButton").addEventListener("click", generateExecutiveSummary);
+  const exportButton = document.getElementById("exportButton");
+
+  if (exportButton) {
+    exportButton.addEventListener("click", generateExecutiveSummary);
+  }
 });
