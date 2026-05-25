@@ -1,6 +1,6 @@
-# AI-GOV Malaysia: KSN Command Dashboard
+# AI-GOV Malaysia: KSU KD Command Dashboard
 
-Dashboard statik untuk memantau prestasi pelaksanaan AI sektor awam Malaysia daripada perspektif Ketua Setiausaha Negara.
+Dashboard statik untuk memantau prestasi pelaksanaan AI sektor awam Malaysia daripada perspektif KSU KD.
 
 ## Cara buka
 
@@ -27,6 +27,6 @@ http://localhost:8000
 - Security AI Dashboard untuk AI security posture, threat intelligence, control coverage dan action queue
 - AI Risk & Trust Monitor
 - Roadmap pelaksanaan nasional
-- Butang Ringkasan KSN yang boleh dicetak atau disimpan sebagai PDF melalui dialog print browser
+- Butang Ringkasan KSU KD yang boleh dicetak atau disimpan sebagai PDF melalui dialog print browser
 
 Semua data contoh berada dalam `script.js` dan boleh diganti dengan data sebenar daripada HRMIS, JDN, ICU, MyGovCloud atau sistem kementerian.
