@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-GOV Malaysia | KSN Command Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Navigasi dashboard">
+        <div class="brand">
+          <span class="brand-mark">AI</span>
+          <div>
+            <strong>AI-GOV Malaysia</strong>
+            <small>KSN Command Dashboard</small>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#overview" class="active">Executive View</a>
+          <a href="#statistics">Statistik AI Nasional</a>
+          <a href="#scorecard">Scorecard Nasional</a>
+          <a href="#ministries">Ranking Kementerian</a>
+          <a href="#projects">Implementation Tracker</a>
+          <a href="#rakyat">AI Rakyat Readiness</a>
+          <a href="#risk">Risk & Trust Monitor</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <span>Status Nasional</span>
+          <strong>Progressing</strong>
+          <p>Perlu intervensi pada governance, talent readiness dan projek berisiko tinggi.</p>
+        </div>
+      </aside>
+
+      <main class="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Platform Reformasi AI Kerajaan Malaysia</p>
+            <h1>National Public Sector AI Performance Dashboard</h1>
+            <p class="lede">
+              Paparan eksekutif untuk Ketua Setiausaha Negara bagi memantau execution AI sektor awam,
+              outcome kepada rakyat, produktiviti kerajaan, trust dan tadbir urus AI yang bertanggungjawab.
+            </p>
+          </div>
+          <div class="topbar-actions">
+            <span id="lastUpdated" class="timestamp">Dikemaskini: -</span>
+            <button type="button" id="exportButton" class="primary-button">Jana Ringkasan KSN</button>
+          </div>
+        </header>
+
+        <section id="overview" class="hero-grid">
+          <article class="hero-card national-score">
+            <div class="card-heading">
+              <span>National AI Score</span>
+              <strong>76.4</strong>
+            </div>
+            <div class="score-ring" aria-label="Skor nasional AI 76.4 peratus">
+              <span>76%</span>
+            </div>
+            <p>
+              Skor gabungan governance, delivery, talent, citizen impact, productivity, trust dan security.
+            </p>
+            <div class="mini-bars" aria-label="Pecahan skor nasional">
+              <div><span>Governance</span><b style="width: 82%"></b></div>
+              <div><span>Delivery</span><b style="width: 68%"></b></div>
+              <div><span>Talent</span><b style="width: 71%"></b></div>
+              <div><span>Trust</span><b style="width: 77%"></b></div>
+            </div>
+          </article>
+
+          <article class="hero-card command-brief">
+            <p class="eyebrow">Soalan Utama KSN</p>
+            <h2>Apa yang perlu diputuskan minggu ini?</h2>
+            <ul class="decision-list">
+              <li>Kementerian mana perlu intervensi kerana belum lengkap AI Governance Committee?</li>
+              <li>Projek AI mana lewat milestone tetapi mempunyai impak rakyat tinggi?</li>
+              <li>Risiko data, etika dan cybersecurity mana perlu dibawa ke mesyuarat tertinggi?</li>
+            </ul>
+          </article>
+
+          <article class="hero-card alert-card">
+            <div class="card-heading">
+              <span>Early Warning System</span>
+              <strong>8 Alert</strong>
+            </div>
+            <div class="alert-stack" id="alertStack"></div>
+          </article>
+        </section>
+
+        <section class="metric-grid" aria-label="KPI utama nasional">
+          <article class="metric-card success">
+            <span>AI Policy Kementerian</span>
+            <strong>100%</strong>
+            <small>Sasaran 2030</small>
+          </article>
+          <article class="metric-card">
+            <span>AI Use Cases</span>
+            <strong>500+</strong>
+            <small>Portfolio sektor awam</small>
+          </article>
+          <article class="metric-card warning">
+            <span>Penjawat Awam Dilatih</span>
+            <strong>1 juta</strong>
+            <small>AI literacy dan leadership</small>
+          </article>
+          <article class="metric-card info">
+            <span>Rakyat Dilatih AI</span>
+            <strong>10 juta</strong>
+            <small>Whole-of-nation readiness</small>
+          </article>
+          <article class="metric-card success">
+            <span>Pengurangan Masa Proses</span>
+            <strong>50%</strong>
+            <small>Outcome perkhidmatan rakyat</small>
+          </article>
+          <article class="metric-card danger">
+            <span>Critical AI/Security Incident</span>
+            <strong>&lt;1%</strong>
+            <small>Ambang risiko nasional</small>
+          </article>
+        </section>
+
+        <section id="statistics" class="statistics-page">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Executive Statistical View</p>
+              <h2>Statistik AI Nasional</h2>
+              <p>
+                Paparan statistik kuantitatif untuk melihat trend pelaksanaan AI, status projek,
+                readiness kementerian, capaian latihan dan risiko strategik negara.
+              </p>
+            </div>
+            <span class="data-badge">Data contoh 2026</span>
+          </div>
+
+          <div class="stats-strip" id="nationalStatsStrip"></div>
+
+          <div class="statistics-grid">
+            <article class="panel stat-panel wide">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Trend Bulanan</p>
+                  <h2>Pertumbuhan AI Use Cases</h2>
+                </div>
+                <span class="data-badge">Jan-Jun</span>
+              </div>
+              <div class="chart-frame" id="useCaseTrendChart" aria-label="Graf trend pertumbuhan AI use cases"></div>
+            </article>
+
+            <article class="panel stat-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Portfolio Projek</p>
+                  <h2>Status Projek AI</h2>
+                </div>
+              </div>
+              <div class="donut-wrap">
+                <div id="projectStatusDonut" class="donut-chart" aria-label="Carta donut status projek AI"></div>
+                <div id="projectStatusLegend" class="donut-legend"></div>
+              </div>
+            </article>
+
+            <article class="panel stat-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Kementerian</p>
+                  <h2>AI Readiness Score</h2>
+                </div>
+              </div>
+              <div class="compact-bars" id="ministryStatsBars"></div>
+            </article>
+
+            <article class="panel stat-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Latihan Nasional</p>
+                  <h2>Capaian Mengikut Segmen</h2>
+                </div>
+              </div>
+              <div class="compact-bars" id="trainingStatsBars"></div>
+            </article>
+
+            <article class="panel stat-panel wide">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Risk Intelligence</p>
+                  <h2>Indeks Risiko Strategik AI</h2>
+                </div>
+              </div>
+              <div class="risk-stats-grid" id="riskStatsGrid"></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="scorecard" class="section-grid two-columns">
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Scorecard Nasional</p>
+                <h2>KPI 2030 Yang Dipantau</h2>
+              </div>
+              <select id="domainFilter" aria-label="Tapis KPI mengikut domain">
+                <option value="all">Semua Domain</option>
+              </select>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Domain</th>
+                    <th>KPI Nasional</th>
+                    <th>Sasaran</th>
+                    <th>Progress</th>
+                  </tr>
+                </thead>
+                <tbody id="kpiTable"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AI Maturity Index</p>
+                <h2>Tahap Kematangan Pelaksanaan</h2>
+              </div>
+            </div>
+            <div class="maturity-ladder">
+              <div class="maturity-step complete"><span>1</span><strong>Awareness</strong><small>Kesedaran AI wujud</small></div>
+              <div class="maturity-step complete"><span>2</span><strong>Adoption</strong><small>Use case awal berjalan</small></div>
+              <div class="maturity-step active"><span>3</span><strong>Operational</strong><small>KPI operasi mula diukur</small></div>
+              <div class="maturity-step"><span>4</span><strong>Integrated</strong><small>Data dan proses disepadukan</small></div>
+              <div class="maturity-step"><span>5</span><strong>Transformational</strong><small>Impak nasional berskala</small></div>
+            </div>
+          </article>
+        </section>
+
+        <section id="ministries" class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Cabinet & KSN Reporting</p>
+              <h2>Ranking AI Readiness Kementerian</h2>
+            </div>
+            <div class="legend">
+              <span><i class="dot green"></i>Advanced</span>
+              <span><i class="dot yellow"></i>Progressing</span>
+              <span><i class="dot red"></i>Beginner</span>
+            </div>
+          </div>
+          <div class="ranking-list" id="ministryRanking"></div>
+        </section>
+
+        <section id="projects" class="section-grid two-columns">
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AI Implementation Tracker</p>
+                <h2>Portfolio Projek AI Sektor Awam</h2>
+              </div>
+              <select id="projectFilter" aria-label="Tapis projek mengikut sektor">
+                <option value="all">Semua Sektor</option>
+              </select>
+            </div>
+            <div class="project-list" id="projectList"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Economic & Productivity Impact</p>
+                <h2>ROI Pelaksanaan AI</h2>
+              </div>
+            </div>
+            <div class="impact-bars">
+              <div class="impact-row">
+                <span>Penjimatan kos operasi</span>
+                <strong>RM1 bilion</strong>
+                <div><b style="width: 72%"></b></div>
+              </div>
+              <div class="impact-row">
+                <span>Pengurangan kerja manual</span>
+                <strong>70%</strong>
+                <div><b style="width: 70%"></b></div>
+              </div>
+              <div class="impact-row">
+                <span>Automasi proses berulang</span>
+                <strong>65%</strong>
+                <div><b style="width: 65%"></b></div>
+              </div>
+              <div class="impact-row">
+                <span>Peningkatan produktiviti unit digital</span>
+                <strong>58%</strong>
+                <div><b style="width: 58%"></b></div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="rakyat" class="section-grid two-columns">
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AI Rakyat Readiness Index</p>
+                <h2>National AI Literacy Map</h2>
+              </div>
+            </div>
+            <div class="state-grid" id="stateGrid"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Inclusivity Score</p>
+                <h2>Segmen Rakyat Dilatih AI</h2>
+              </div>
+            </div>
+            <div class="segment-list" id="segmentList"></div>
+          </article>
+        </section>
+
+        <section id="risk" class="section-grid two-columns">
+          <article class="panel risk-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AI Risk & Trust Monitor</p>
+                <h2>Risiko Strategik Untuk Dipantau</h2>
+              </div>
+            </div>
+            <div class="risk-grid" id="riskGrid"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Cadangan Pelaksanaan</p>
+                <h2>Roadmap Rollout Nasional</h2>
+              </div>
+            </div>
+            <div class="timeline">
+              <div>
+                <span>Fasa 1 | 6 bulan</span>
+                <strong>Pilot</strong>
+                <p>JPM, MAMPU, MOF, KKM dan KPM sebagai kementerian/agensi anchor.</p>
+              </div>
+              <div>
+                <span>Fasa 2 | 12 bulan</span>
+                <strong>Semua Kementerian Persekutuan</strong>
+                <p>Scorecard kementerian, ranking AI readiness dan laporan bulanan KSN.</p>
+              </div>
+              <div>
+                <span>Fasa 3</span>
+                <strong>Negeri, PBT dan GLC Strategik</strong>
+                <p>Perluasan whole-of-nation untuk readiness rakyat dan impak ekonomi.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel summary-panel" aria-live="polite">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Ringkasan Eksekutif</p>
+              <h2>Nota Untuk KSN</h2>
+            </div>
+          </div>
+          <p id="executiveSummary">
+            Klik butang "Jana Ringkasan KSN" untuk menghasilkan ringkasan tindakan berdasarkan status dashboard.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
