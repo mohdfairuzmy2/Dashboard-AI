@@ -2120,6 +2120,189 @@ tr:hover td {
   }
 }
 
+/* UI polish for a cleaner white analytics experience */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+button,
+select,
+.pill,
+.nav-links a {
+  cursor: pointer;
+}
+
+.topbar {
+  align-items: center;
+}
+
+.topbar-actions {
+  min-width: 280px;
+  padding: 12px;
+  border: 1px solid #e5edf6;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(29, 55, 90, 0.07);
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  width: 100%;
+  padding: 0 18px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(59, 115, 217, 0.26);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+}
+
+.primary-button:focus-visible,
+select:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid rgba(59, 115, 217, 0.2);
+  outline-offset: 2px;
+}
+
+.print-hint {
+  max-width: 100%;
+  text-align: center;
+}
+
+.nav-links {
+  gap: 7px;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 12px;
+  border-radius: 14px;
+}
+
+.nav-links a.active {
+  box-shadow: inset 3px 0 0 #3b73d9;
+}
+
+.command-tags span,
+.data-badge,
+.pill,
+.status,
+.project-meta span {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.command-tags span,
+.data-badge {
+  padding: 7px 11px;
+}
+
+.hero-card,
+.panel,
+.metric-card,
+.statistics-page,
+.security-dashboard,
+.command-ribbon article {
+  border-radius: 22px;
+}
+
+.section-heading {
+  align-items: center;
+}
+
+.section-heading h2 {
+  line-height: 1.12;
+}
+
+.metric-grid {
+  gap: 16px;
+}
+
+.metric-card {
+  min-height: 132px;
+  padding: 18px;
+}
+
+.metric-card strong,
+.stat-tile strong {
+  line-height: 1;
+}
+
+.card-heading strong {
+  line-height: 1;
+}
+
+select {
+  min-height: 42px;
+  border-radius: 14px;
+  padding: 0 14px;
+  font-weight: 750;
+}
+
+.table-wrap {
+  border: 1px solid #e5edf6;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+table {
+  min-width: 760px;
+}
+
+th,
+td {
+  border-bottom-color: #edf2f7;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+.progress-track,
+.mini-track,
+.security-gauge {
+  height: 10px;
+}
+
+.compact-bar-row {
+  gap: 14px;
+}
+
+.alert-item,
+.project-card,
+.ranking-row,
+.segment-row,
+.risk-item,
+.state-card,
+.security-threat-card,
+.security-action-card {
+  border-radius: 16px;
+}
+
+.summary-panel {
+  margin-bottom: 12px;
+}
+
 @page {
   size: A4;
   margin: 14mm;
