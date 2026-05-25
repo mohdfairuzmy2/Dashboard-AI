@@ -2303,6 +2303,15 @@ tr:last-child td {
   margin-bottom: 12px;
 }
 
+/* Let the landing header scroll away so each dashboard section can use the full viewport. */
+.topbar {
+  position: static;
+  margin: 0 0 18px;
+  padding: 0 0 22px;
+  background: transparent;
+  backdrop-filter: none;
+}
+
 @page {
   size: A4;
   margin: 14mm;
