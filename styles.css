@@ -297,10 +297,9 @@ h2 {
 
 .mini-bars {
   display: grid;
-  gap: 10px;
+  gap: 14px;
 }
 
-.mini-bars div,
 .impact-row div,
 .progress-track {
   overflow: hidden;
@@ -313,8 +312,15 @@ h2 {
   display: block;
   margin-bottom: 6px;
   color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.mini-track {
+  overflow: hidden;
+  height: 10px;
+  border-radius: 999px;
+  background: #dbe4ee;
 }
 
 .mini-bars b,
