@@ -1,4 +1,4 @@
-# AI-GOV Malaysia: KSU KD Command Dashboard
+# AI-GOV Malaysia
 
 Dashboard statik untuk memantau prestasi pelaksanaan AI sektor awam Malaysia daripada perspektif KSU KD.
 
