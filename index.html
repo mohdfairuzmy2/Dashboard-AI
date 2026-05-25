@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI-GOV Malaysia | KSN Command Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=20260525-1132" />
+    <link rel="stylesheet" href="styles.css?v=20260525-1134" />
   </head>
   <body>
     <div class="app-shell">
@@ -24,6 +24,7 @@
           <a href="#ministries">Ranking Kementerian</a>
           <a href="#projects">Implementation Tracker</a>
           <a href="#rakyat">AI Rakyat Readiness</a>
+          <a href="#security-ai">Security AI</a>
           <a href="#risk">Risk & Trust Monitor</a>
         </nav>
 
@@ -353,6 +354,65 @@
           </article>
         </section>
 
+        <section id="security-ai" class="security-dashboard">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">AI Security Command Centre</p>
+              <h2>Security AI Dashboard</h2>
+              <p>
+                Dashboard khusus untuk memantau keselamatan penggunaan AI kerajaan: data protection,
+                model security, prompt abuse, deepfake threats, incident response dan compliance.
+              </p>
+            </div>
+            <span class="data-badge">Security posture: Watch</span>
+          </div>
+
+          <div class="security-hero">
+            <article class="security-posture-card">
+              <span>AI Security Posture</span>
+              <strong>72%</strong>
+              <p>Skor gabungan kawalan keselamatan AI, data, model, akses dan readiness tindak balas insiden.</p>
+              <div class="security-gauge">
+                <b style="width: 72%"></b>
+              </div>
+            </article>
+
+            <div class="security-metrics" id="securityMetrics"></div>
+          </div>
+
+          <div class="security-grid">
+            <article class="panel stat-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Threat Intelligence</p>
+                  <h2>Ancaman AI Utama</h2>
+                </div>
+              </div>
+              <div class="security-threat-list" id="securityThreatList"></div>
+            </article>
+
+            <article class="panel stat-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Control Coverage</p>
+                  <h2>Kawalan Keselamatan AI</h2>
+                </div>
+              </div>
+              <div class="compact-bars" id="securityControlBars"></div>
+            </article>
+
+            <article class="panel stat-panel wide">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Incident Response</p>
+                  <h2>Security AI Action Queue</h2>
+                </div>
+              </div>
+              <div class="security-action-grid" id="securityActionGrid"></div>
+            </article>
+          </div>
+        </section>
+
         <section id="risk" class="section-grid two-columns">
           <article class="panel risk-panel">
             <div class="section-heading">
@@ -407,6 +467,6 @@
 
     <section id="printReport" class="print-report" aria-label="Ringkasan KSN untuk cetakan dan PDF"></section>
 
-    <script src="script.js?v=20260525-1132"></script>
+    <script src="script.js?v=20260525-1134"></script>
   </body>
 </html>

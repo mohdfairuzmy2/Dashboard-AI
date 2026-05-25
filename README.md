@@ -24,6 +24,7 @@ http://localhost:8000
 - Ranking AI Readiness Kementerian
 - AI Implementation Tracker
 - AI Rakyat Readiness Index
+- Security AI Dashboard untuk AI security posture, threat intelligence, control coverage dan action queue
 - AI Risk & Trust Monitor
 - Roadmap pelaksanaan nasional
 - Butang Ringkasan KSN yang boleh dicetak atau disimpan sebagai PDF melalui dialog print browser

@@ -146,6 +146,63 @@ const riskStats = [
   { label: "Compliance", value: 31, detail: "Pematuhan PDPA dan standard keselamatan" },
 ];
 
+const securityMetrics = [
+  { label: "Critical AI Incidents", value: "0", note: "Dalam bulan semasa", tone: "success" },
+  { label: "High Risk Findings", value: "7", note: "Perlu remediation <30 hari", tone: "warning" },
+  { label: "AI Systems Assessed", value: "64%", note: "Telah melalui risk assessment", tone: "info" },
+  { label: "Data Controls Coverage", value: "71%", note: "Masking, access log, audit trail", tone: "warning" },
+];
+
+const securityThreats = [
+  {
+    name: "Prompt Injection",
+    level: "High",
+    detail: "Risiko arahan berniat jahat terhadap chatbot dan agent AI kerajaan.",
+    owner: "JDN / CISO",
+  },
+  {
+    name: "Sensitive Data Leakage",
+    level: "High",
+    detail: "Risiko pendedahan PII, rekod bantuan, kesihatan atau maklumat dalaman.",
+    owner: "Data Owner",
+  },
+  {
+    name: "Model Bias & Hallucination",
+    level: "Medium",
+    detail: "Output tidak tepat atau berat sebelah untuk keputusan berimpak rakyat.",
+    owner: "AI Governance Lead",
+  },
+  {
+    name: "Deepfake & Synthetic Media",
+    level: "Medium",
+    detail: "Ancaman manipulasi komunikasi kerajaan dan keyakinan awam.",
+    owner: "Strategic Comms",
+  },
+  {
+    name: "Model Supply Chain",
+    level: "Medium",
+    detail: "Kebergantungan kepada model, API atau dataset pihak ketiga tanpa assurance.",
+    owner: "Procurement / Security",
+  },
+];
+
+const securityControls = [
+  { label: "AI Risk Assessment", value: 64 },
+  { label: "Data Classification", value: 71 },
+  { label: "Access Control & MFA", value: 82 },
+  { label: "Audit Trail & Logging", value: 68 },
+  { label: "Model Validation", value: 57 },
+  { label: "Human-in-the-loop Review", value: 61 },
+  { label: "Incident Response Playbook", value: 54 },
+];
+
+const securityActions = [
+  { title: "Mandate AI security baseline", due: "30 hari", status: "Priority", detail: "Wajib untuk semua projek AI berimpak rakyat sebelum production." },
+  { title: "Tetapkan AI red-team exercise", due: "60 hari", status: "Watch", detail: "Ujian prompt injection, data leakage dan abuse case untuk sistem utama." },
+  { title: "Lengkapkan model registry", due: "90 hari", status: "Watch", detail: "Daftar model, dataset, owner, version, risk rating dan audit evidence." },
+  { title: "Aktifkan deepfake response protocol", due: "30 hari", status: "Priority", detail: "SOP pengesahan kandungan, komunikasi krisis dan takedown coordination." },
+];
+
 const statusTone = {
   Advanced: "advanced",
   Progressing: "progressing",
@@ -156,6 +213,7 @@ const statusTone = {
   High: "danger",
   Medium: "warning",
   Low: "success",
+  Priority: "danger",
 };
 
 function progressTone(value) {
@@ -429,6 +487,65 @@ function renderRiskStatsGrid() {
     .join("");
 }
 
+function renderSecurityMetrics() {
+  const grid = document.getElementById("securityMetrics");
+  grid.innerHTML = securityMetrics
+    .map(
+      (metric) => `
+        <article class="security-metric-card">
+          <span>${metric.label}</span>
+          <strong>${metric.value}</strong>
+          <small>${metric.note}</small>
+          <i class="pill ${metric.tone}">${metric.tone === "success" ? "Stable" : metric.tone === "info" ? "Monitor" : "Watch"}</i>
+        </article>
+      `,
+    )
+    .join("");
+}
+
+function renderSecurityThreats() {
+  const list = document.getElementById("securityThreatList");
+  list.innerHTML = securityThreats
+    .map(
+      (threat) => `
+        <div class="security-threat-card">
+          <div class="risk-topline">
+            <strong>${threat.name}</strong>
+            <span class="pill ${statusTone[threat.level]}">${threat.level}</span>
+          </div>
+          <p>${threat.detail}</p>
+          <span>Owner: ${threat.owner}</span>
+        </div>
+      `,
+    )
+    .join("");
+}
+
+function renderSecurityActions() {
+  const grid = document.getElementById("securityActionGrid");
+  grid.innerHTML = securityActions
+    .map(
+      (action) => `
+        <div class="security-action-card">
+          <div class="risk-topline">
+            <strong>${action.title}</strong>
+            <span class="pill ${statusTone[action.status]}">${action.status}</span>
+          </div>
+          <p>${action.detail}</p>
+          <span>Due: ${action.due}</span>
+        </div>
+      `,
+    )
+    .join("");
+}
+
+function renderSecurityDashboard() {
+  renderSecurityMetrics();
+  renderSecurityThreats();
+  renderCompactBars("securityControlBars", securityControls);
+  renderSecurityActions();
+}
+
 function renderNationalStatistics() {
   renderStatisticalSnapshot();
   renderUseCaseTrendChart();
@@ -579,6 +696,16 @@ function buildPrintableReport(summary) {
       <ul class="print-list">${riskItems}</ul>
       <p class="print-note">Nota: Untuk simpan sebagai PDF, pilih destinasi "Save as PDF" dalam dialog print browser.</p>
     </section>
+
+    <section class="print-section">
+      <span class="print-section-label">Security AI</span>
+      <h2>Keutamaan Keselamatan AI</h2>
+      <ul class="print-list">
+        <li>AI Security Posture berada pada 72% dan memerlukan pengukuhan kawalan model validation serta incident response playbook.</li>
+        <li>Ancaman utama ialah prompt injection, sensitive data leakage, deepfake dan model supply chain.</li>
+        <li>Cadangan tindakan: mandate AI security baseline, red-team exercise dan model registry nasional.</li>
+      </ul>
+    </section>
   `;
 }
 
@@ -637,6 +764,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderMinistries();
   renderProjects();
   renderNationalStatistics();
+  renderSecurityDashboard();
   renderStates();
   renderSegments();
   renderRisks();
