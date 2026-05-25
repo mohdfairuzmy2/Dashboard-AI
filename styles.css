@@ -1720,6 +1720,408 @@ tr:hover td {
   }
 }
 
+/* White Modern Analytics Dashboard theme */
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-strong: #f8fafc;
+  --surface-soft: #eef4fb;
+  --text: #111827;
+  --muted: #7a8699;
+  --muted-strong: #465368;
+  --line: #e5edf6;
+  --primary: #3b73d9;
+  --primary-strong: #2459bd;
+  --primary-soft: #eaf2ff;
+  --success: #19a974;
+  --success-soft: #e8f8f1;
+  --warning: #f59e0b;
+  --warning-soft: #fff5dc;
+  --danger: #ef4444;
+  --danger-soft: #feecef;
+  --info: #28a8c7;
+  --info-soft: #e8f8fc;
+  --shadow: 0 18px 45px rgba(29, 55, 90, 0.08);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(59, 115, 217, 0.1), transparent 30rem),
+    linear-gradient(135deg, #f9fbff 0%, #f4f7fb 48%, #edf3f9 100%);
+  color: var(--text);
+}
+
+.app-shell {
+  grid-template-columns: 286px minmax(0, 1fr);
+}
+
+.sidebar {
+  border-right: 1px solid #e7edf5;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  box-shadow: 16px 0 42px rgba(29, 55, 90, 0.06);
+}
+
+.brand-mark {
+  background: #3b73d9;
+  box-shadow: none;
+}
+
+.brand strong {
+  color: #111827;
+}
+
+.brand small {
+  color: #7a8699;
+}
+
+.nav-links a {
+  border: 1px solid transparent;
+  color: #536173;
+  font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-color: #d7e5fb;
+  background: #eaf2ff;
+  color: #2459bd;
+}
+
+.sidebar-card {
+  border-color: #dfe8f3;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(29, 55, 90, 0.08);
+}
+
+.sidebar-card span,
+.sidebar-card p,
+.ops-list span {
+  color: #7a8699;
+}
+
+.sidebar-card strong {
+  color: #f59e0b;
+}
+
+.ops-list div {
+  border-color: #e5edf6;
+  background: #f8fafc;
+}
+
+.ops-list b {
+  color: #111827;
+}
+
+.dashboard {
+  width: min(1680px, 100%);
+  padding: 28px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  margin: -28px -28px 18px;
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(229, 237, 246, 0.9);
+  background: rgba(249, 251, 255, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+h1 {
+  max-width: 1050px;
+  color: #111827;
+  font-size: clamp(2rem, 4vw, 4.2rem);
+  letter-spacing: -0.06em;
+}
+
+h2,
+.card-heading strong,
+.metric-card strong,
+.stat-tile strong,
+.risk-stat-card strong,
+td strong,
+.legend-row strong,
+.compact-bar-row strong,
+.security-posture-card strong,
+.security-metric-card strong {
+  color: #111827;
+}
+
+.eyebrow {
+  color: #2459bd;
+}
+
+.lede,
+.national-score p,
+.panel p,
+.command-ribbon p,
+.stat-tile small,
+.risk-stat-card p,
+.security-posture-card p,
+.security-threat-card p,
+.security-action-card p {
+  color: #536173;
+}
+
+.command-tags span,
+.data-badge {
+  border-color: #d7e5fb;
+  background: #eaf2ff;
+  color: #2459bd;
+}
+
+.timestamp,
+.print-hint {
+  color: #7a8699;
+}
+
+.primary-button {
+  border: 1px solid #2f66c7;
+  background: #3b73d9;
+  box-shadow: 0 12px 24px rgba(59, 115, 217, 0.22);
+}
+
+.primary-button:hover {
+  background: #2459bd;
+}
+
+.command-ribbon article,
+.hero-card,
+.panel,
+.metric-card,
+.statistics-page,
+.security-dashboard {
+  border: 1px solid #e5edf6;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.command-ribbon article {
+  min-height: 132px;
+}
+
+.command-ribbon span {
+  color: #2459bd;
+}
+
+.command-ribbon strong {
+  color: #111827;
+}
+
+.metric-card,
+.stat-tile,
+.ranking-row,
+.project-card,
+.risk-item,
+.state-card,
+.security-threat-card,
+.security-action-card {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.metric-card:hover,
+.stat-tile:hover,
+.ranking-row:hover,
+.project-card:hover,
+.risk-item:hover,
+.state-card:hover,
+.security-threat-card:hover,
+.security-action-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbdcf8;
+  background: #ffffff;
+  box-shadow: 0 18px 38px rgba(29, 55, 90, 0.12);
+}
+
+.national-score {
+  border-color: #d7e5fb;
+}
+
+.score-ring {
+  width: 178px;
+  height: 178px;
+  background:
+    radial-gradient(circle, #ffffff 55%, transparent 57%),
+    conic-gradient(#3b73d9 0 76%, #e5edf6 76% 100%);
+  box-shadow: none;
+}
+
+.score-ring span {
+  color: #2459bd;
+}
+
+.mini-track,
+.impact-row div,
+.progress-track,
+.security-gauge {
+  background: #e7edf5;
+}
+
+.mini-bars span,
+.card-heading span,
+.metric-card span,
+.stat-tile span,
+.risk-stat-card span,
+.security-posture-card span,
+.security-metric-card span,
+.security-action-card span,
+.security-threat-card span {
+  color: #7a8699;
+}
+
+.command-brief {
+  border-color: #d7e5fb;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(59, 115, 217, 0.08), transparent 18rem),
+    #ffffff;
+  color: #111827;
+}
+
+.command-brief .eyebrow {
+  color: #2459bd;
+}
+
+.command-brief p {
+  color: #536173;
+}
+
+.decision-list li,
+.alert-item,
+.project-card,
+.ranking-row,
+.segment-row,
+.risk-item,
+.state-card,
+.stat-tile,
+.risk-stat-card,
+.maturity-step,
+.timeline div,
+.security-posture-card,
+.security-metric-card,
+.security-threat-card,
+.security-action-card {
+  border-color: #e5edf6;
+  background: #f8fafc;
+}
+
+.decision-list li {
+  color: #111827;
+}
+
+.statistics-page,
+.security-dashboard {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(59, 115, 217, 0.08), transparent 24rem),
+    #ffffff;
+}
+
+.security-dashboard {
+  border-color: #e5edf6;
+}
+
+.security-gauge b {
+  background: linear-gradient(90deg, #28a8c7, #3b73d9);
+}
+
+select {
+  border-color: #dfe8f3;
+  background: #ffffff;
+  color: #111827;
+}
+
+th {
+  color: #7a8699;
+}
+
+td,
+.project-meta span,
+.state-card span,
+.alert-item span,
+.project-card span,
+.risk-item span,
+.compact-bar-row span,
+.legend-row span {
+  color: #536173;
+}
+
+tr:hover td {
+  background: #f4f8ff;
+}
+
+.rank-number,
+.maturity-step.active span {
+  background: #eaf2ff;
+  color: #2459bd;
+}
+
+.status,
+.project-meta span {
+  border-color: #e5edf6;
+  background: #ffffff;
+}
+
+.pill.success {
+  background: #e8f8f1;
+  color: #12835b;
+}
+
+.pill.warning {
+  background: #fff5dc;
+  color: #a16207;
+}
+
+.pill.danger {
+  background: #feecef;
+  color: #be123c;
+}
+
+.pill.info {
+  background: #e8f8fc;
+  color: #0e7490;
+}
+
+.donut-chart::after {
+  background: #ffffff;
+  color: #111827;
+}
+
+.chart-value {
+  fill: #111827;
+}
+
+.axis-label,
+.chart-caption {
+  fill: #7a8699;
+}
+
+.summary-panel {
+  border-color: #d7e5fb;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(59, 115, 217, 0.08), transparent 20rem),
+    #ffffff;
+}
+
+.summary-panel .eyebrow,
+.summary-panel h2 {
+  color: #111827;
+}
+
+.summary-panel p {
+  color: #536173;
+}
+
+@media (max-width: 1180px) {
+  .topbar {
+    background: transparent;
+  }
+}
+
 @page {
   size: A4;
   margin: 14mm;
