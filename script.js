@@ -452,17 +452,149 @@ function updateTimestamp() {
   document.getElementById("lastUpdated").textContent = `Dikemaskini: ${formatter.format(new Date())}`;
 }
 
-function generateExecutiveSummary() {
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function getExecutiveSummaryText() {
   const beginnerMinistries = ministries.filter((ministry) => ministry.status === "Beginner").length;
   const delayedProjects = projects.filter((project) => project.status === "Delayed").length;
   const highRisks = risks.filter((risk) => risk.level === "High").map((risk) => risk.name).join(", ");
   const trustKpi = kpis.find((item) => item.name === "AI Public Trust Index");
 
-  document.getElementById("executiveSummary").textContent =
+  return (
     `Ringkasan KSN: Skor nasional AI berada pada tahap Progressing dengan ${beginnerMinistries} kementerian masih pada tahap Beginner. ` +
     `${delayedProjects} projek memerlukan intervensi segera, khususnya projek talent analytics yang tertangguh. ` +
     `Risiko tertinggi ialah ${highRisks}. AI Public Trust Index kini berada pada ${trustKpi.progress}% daripada sasaran ${trustKpi.target}; ` +
-    "cadangan tindakan ialah mengadakan delivery huddle mingguan, mempercepat pelantikan AI Lead kementerian dan mewajibkan AI risk assessment bagi semua projek berimpak rakyat.";
+    "cadangan tindakan ialah mengadakan delivery huddle mingguan, mempercepat pelantikan AI Lead kementerian dan mewajibkan AI risk assessment bagi semua projek berimpak rakyat."
+  );
+}
+
+function buildPrintableReport(summary) {
+  const report = document.getElementById("printReport");
+  const generatedAt = new Intl.DateTimeFormat("ms-MY", {
+    dateStyle: "full",
+    timeStyle: "short",
+  }).format(new Date());
+  const advancedMinistries = ministries.filter((ministry) => ministry.status === "Advanced").length;
+  const onTrackProjects = projects.filter((project) => project.status === "On Track").length;
+  const delayedProjects = projects.filter((project) => project.status === "Delayed").length;
+  const highRisks = risks.filter((risk) => risk.level === "High");
+  const trustKpi = kpis.find((item) => item.name === "AI Public Trust Index");
+  const topMinistries = ministries
+    .slice(0, 5)
+    .map(
+      (ministry, index) => `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${escapeHtml(ministry.name)}</td>
+          <td>${escapeHtml(ministry.status)}</td>
+          <td>${ministry.score}%</td>
+        </tr>
+      `,
+    )
+    .join("");
+  const projectRows = projects
+    .map(
+      (project) => `
+        <tr>
+          <td>${escapeHtml(project.title)}</td>
+          <td>${escapeHtml(project.owner)}</td>
+          <td>${escapeHtml(project.status)}</td>
+          <td>${project.progress}%</td>
+          <td>${escapeHtml(project.risk)}</td>
+        </tr>
+      `,
+    )
+    .join("");
+  const riskItems = highRisks
+    .map((risk) => `<li><strong>${escapeHtml(risk.name)}:</strong> ${escapeHtml(risk.detail)}</li>`)
+    .join("");
+
+  report.innerHTML = `
+    <div class="print-cover">
+      <span>AI-GOV Malaysia | KSN Executive Report</span>
+      <h1>Ringkasan Prestasi Pelaksanaan AI Sektor Awam Malaysia</h1>
+      <p>Dokumen ini dijana daripada Modern Executive Command Centre untuk cetakan mesyuarat, edaran dalaman, atau simpanan PDF.</p>
+      <div class="print-meta">
+        <div><strong>Tarikh jana</strong><br>${escapeHtml(generatedAt)}</div>
+        <div><strong>Status nasional</strong><br>Progressing</div>
+        <div><strong>Skor nasional</strong><br>76.4 / 100</div>
+      </div>
+    </div>
+
+    <div class="print-grid">
+      <div class="print-stat"><span>AI Use Cases</span><strong>286</strong><small>58% menuju sasaran 500+</small></div>
+      <div class="print-stat"><span>Kementerian Advanced</span><strong>${advancedMinistries}</strong><small>Daripada ${ministries.length} entiti contoh</small></div>
+      <div class="print-stat"><span>Projek On Track</span><strong>${onTrackProjects}/${projects.length}</strong><small>${delayedProjects} projek lewat</small></div>
+      <div class="print-stat"><span>AI Public Trust Index</span><strong>${trustKpi.progress}%</strong><small>Sasaran ${escapeHtml(trustKpi.target)}</small></div>
+    </div>
+
+    <section class="print-section">
+      <span class="print-section-label">Executive Summary</span>
+      <h2>Nota Untuk KSN</h2>
+      <div class="print-box">${escapeHtml(summary)}</div>
+    </section>
+
+    <section class="print-section">
+      <span class="print-section-label">Keputusan Diperlukan</span>
+      <h2>Attention Today</h2>
+      <ul class="print-list">
+        <li>Memuktamadkan pelantikan AI Lead bagi kementerian yang belum lengkap struktur governance.</li>
+        <li>Escalate projek impak rakyat yang lewat milestone ke delivery huddle KSN.</li>
+        <li>Mewajibkan AI risk assessment bagi projek berisiko tinggi sebelum peluasan nasional.</li>
+      </ul>
+    </section>
+
+    <section class="print-section">
+      <span class="print-section-label">Ranking</span>
+      <h2>Top AI Readiness Kementerian</h2>
+      <table class="print-table">
+        <thead>
+          <tr><th>No.</th><th>Kementerian/Agensi</th><th>Status</th><th>Skor</th></tr>
+        </thead>
+        <tbody>${topMinistries}</tbody>
+      </table>
+    </section>
+
+    <section class="print-section">
+      <span class="print-section-label">Implementation Tracker</span>
+      <h2>Status Projek AI Utama</h2>
+      <table class="print-table">
+        <thead>
+          <tr><th>Projek</th><th>Owner</th><th>Status</th><th>Progress</th><th>Risiko</th></tr>
+        </thead>
+        <tbody>${projectRows}</tbody>
+      </table>
+    </section>
+
+    <section class="print-section">
+      <span class="print-section-label">Risk & Trust</span>
+      <h2>Risiko Tahap Tinggi</h2>
+      <ul class="print-list">${riskItems}</ul>
+      <p class="print-note">Nota: Untuk simpan sebagai PDF, pilih destinasi "Save as PDF" dalam dialog print browser.</p>
+    </section>
+  `;
+}
+
+function generateExecutiveSummary() {
+  const summary = getExecutiveSummaryText();
+
+  document.getElementById("executiveSummary").textContent = summary;
+  buildPrintableReport(summary);
+
+  const originalTitle = document.title;
+  document.title = "Ringkasan KSN AI-GOV Malaysia";
+  window.addEventListener("afterprint", () => {
+    document.title = originalTitle;
+  }, { once: true });
+
+  window.setTimeout(() => window.print(), 150);
 }
 
 function bindFilters() {

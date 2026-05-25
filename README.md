@@ -26,5 +26,6 @@ http://localhost:8000
 - AI Rakyat Readiness Index
 - AI Risk & Trust Monitor
 - Roadmap pelaksanaan nasional
+- Butang Ringkasan KSN yang boleh dicetak atau disimpan sebagai PDF melalui dialog print browser
 
 Semua data contoh berada dalam `script.js` dan boleh diganti dengan data sebenar daripada HRMIS, JDN, ICU, MyGovCloud atau sistem kementerian.

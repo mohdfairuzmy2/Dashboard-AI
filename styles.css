@@ -1241,6 +1241,18 @@ h1 {
   background: linear-gradient(135deg, #0369a1, #1d4ed8);
 }
 
+.print-hint {
+  max-width: 230px;
+  color: #94a3b8;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.print-report {
+  display: none;
+}
+
 .command-ribbon {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1562,5 +1574,145 @@ tr:hover td {
   .ranking-row .status,
   .ranking-row .progress-cell {
     grid-column: 2;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .app-shell {
+    display: none !important;
+  }
+
+  .print-report {
+    display: block;
+    color: #111827;
+    font-family:
+      Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+  }
+
+  .print-cover {
+    border-bottom: 3px solid #111827;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  .print-cover span,
+  .print-section-label {
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .print-cover h1 {
+    margin: 8px 0;
+    color: #111827;
+    font-size: 28px;
+    line-height: 1.05;
+  }
+
+  .print-cover p,
+  .print-meta,
+  .print-note {
+    color: #4b5563;
+    line-height: 1.5;
+  }
+
+  .print-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 14px 0 0;
+    font-size: 11px;
+  }
+
+  .print-meta div,
+  .print-stat,
+  .print-box {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .print-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 14px 0;
+  }
+
+  .print-stat strong {
+    display: block;
+    margin-top: 6px;
+    color: #111827;
+    font-size: 20px;
+  }
+
+  .print-stat span,
+  .print-stat small {
+    color: #4b5563;
+    display: block;
+  }
+
+  .print-section {
+    break-inside: avoid;
+    margin-top: 18px;
+  }
+
+  .print-section h2 {
+    margin: 5px 0 10px;
+    color: #111827;
+    font-size: 17px;
+  }
+
+  .print-box {
+    margin-top: 8px;
+    background: #f9fafb;
+  }
+
+  .print-box strong {
+    color: #111827;
+  }
+
+  .print-list {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    line-height: 1.5;
+  }
+
+  .print-table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-size: 11px;
+  }
+
+  .print-table th,
+  .print-table td {
+    border: 1px solid #d1d5db;
+    padding: 7px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .print-table th {
+    background: #eff6ff;
+    color: #111827;
   }
 }
