@@ -711,8 +711,11 @@ function buildPrintableReport(summary) {
 
 function generateExecutiveSummary() {
   const summary = getExecutiveSummaryText();
+  const executiveSummary = document.getElementById("executiveSummary");
 
-  document.getElementById("executiveSummary").textContent = summary;
+  if (executiveSummary) {
+    executiveSummary.textContent = summary;
+  }
   buildPrintableReport(summary);
 
   const originalTitle = document.title;
