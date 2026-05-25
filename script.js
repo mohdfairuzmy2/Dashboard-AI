@@ -17,7 +17,7 @@ const kpis = [
 
 const ministries = [
   { name: "Kementerian Digital", lead: "AI governance dan platform kerajaan", score: 88, status: "Advanced" },
-  { name: "MAMPU", lead: "Standard, integrasi dan delivery monitoring", score: 84, status: "Advanced" },
+  { name: "JDN", lead: "Standard, integrasi dan delivery monitoring", score: 84, status: "Advanced" },
   { name: "Kementerian Kesihatan", lead: "Healthcare AI dan triage perkhidmatan", score: 79, status: "Progressing" },
   { name: "Kementerian Pendidikan", lead: "AI literacy pelajar dan guru", score: 75, status: "Progressing" },
   { name: "Kementerian Kewangan", lead: "Predictive budgeting dan fraud detection", score: 72, status: "Progressing" },
@@ -30,7 +30,7 @@ const projects = [
   {
     title: "GovAI Citizen Service Assistant",
     sector: "Citizen Services",
-    owner: "MAMPU",
+    owner: "JDN",
     status: "On Track",
     impact: "Multilingual AI untuk pertanyaan kerajaan dan semakan status.",
     progress: 72,

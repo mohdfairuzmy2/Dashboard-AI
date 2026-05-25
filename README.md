@@ -27,4 +27,4 @@ http://localhost:8000
 - AI Risk & Trust Monitor
 - Roadmap pelaksanaan nasional
 
-Semua data contoh berada dalam `script.js` dan boleh diganti dengan data sebenar daripada HRMIS, MAMPU, ICU, MyGovCloud atau sistem kementerian.
+Semua data contoh berada dalam `script.js` dan boleh diganti dengan data sebenar daripada HRMIS, JDN, ICU, MyGovCloud atau sistem kementerian.
