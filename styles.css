@@ -2303,6 +2303,16 @@ tr:last-child td {
   margin-bottom: 12px;
 }
 
+.dashboard-footer {
+  margin: 28px 0 8px;
+  padding: 18px;
+  border-top: 1px solid #e5edf6;
+  color: #7a8699;
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-align: center;
+}
+
 /* Let the landing header scroll away so each dashboard section can use the full viewport. */
 .topbar {
   position: static;
