@@ -1723,7 +1723,7 @@ tr:hover td {
 /* White Modern Analytics Dashboard theme */
 :root {
   color-scheme: light;
-  --bg: #f4f7fb;
+  --bg: #ffffff;
   --surface: #ffffff;
   --surface-strong: #f8fafc;
   --surface-soft: #eef4fb;
@@ -1746,9 +1746,7 @@ tr:hover td {
 }
 
 body {
-  background:
-    radial-gradient(circle at 12% 0%, rgba(59, 115, 217, 0.1), transparent 30rem),
-    linear-gradient(135deg, #f9fbff 0%, #f4f7fb 48%, #edf3f9 100%);
+  background: #ffffff;
   color: var(--text);
 }
 
@@ -1826,7 +1824,7 @@ body {
   margin: -28px -28px 18px;
   padding: 18px 28px;
   border-bottom: 1px solid rgba(229, 237, 246, 0.9);
-  background: rgba(249, 251, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px);
 }
 
