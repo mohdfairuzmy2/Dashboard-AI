@@ -1,35 +1,35 @@
 const kpis = [
-  { domain: "Governance", name: "% kementerian ada AI Policy", target: "100%", progress: 82 },
-  { domain: "Governance", name: "% agensi ada AI Governance Committee", target: "100%", progress: 74 },
-  { domain: "Governance", name: "% kementerian ada Chief AI Officer / AI Lead", target: "90%", progress: 63 },
-  { domain: "Talent", name: "Bilangan penjawat awam dilatih AI", target: "1 juta", progress: 41 },
-  { domain: "Talent", name: "% pengurusan tertinggi dilatih AI Leadership", target: "100%", progress: 56 },
-  { domain: "Talent", name: "Bilangan rakyat dilatih AI", target: "10 juta", progress: 38 },
-  { domain: "Delivery", name: "% perkhidmatan kerajaan menggunakan AI", target: "80%", progress: 46 },
-  { domain: "Delivery", name: "Bilangan AI use cases sektor awam", target: "500+", progress: 58 },
-  { domain: "Citizen Impact", name: "Pengurangan masa proses perkhidmatan", target: "50%", progress: 52 },
-  { domain: "Citizen Impact", name: "Skor kepuasan rakyat", target: ">90%", progress: 69 },
-  { domain: "Productivity", name: "Penjimatan kos operasi kerajaan", target: "RM1 bilion", progress: 44 },
-  { domain: "Trust", name: "AI Public Trust Index", target: ">85%", progress: 77 },
-  { domain: "Inclusion", name: "% akses AI inklusif", target: "100%", progress: 61 },
-  { domain: "Sustainability", name: "% penggunaan AI hijau", target: "70%", progress: 35 },
+  { domain: "Governance", name: "% kementerian mempunyai AI Policy", target: "100%", progress: 82 },
+  { domain: "Governance", name: "% agensi mempunyai Jawatankuasa Governance AI", target: "100%", progress: 74 },
+  { domain: "Governance", name: "% kementerian mempunyai Chief AI Officer / AI Lead", target: "90%", progress: 63 },
+  { domain: "Bakat", name: "Bilangan penjawat awam dilatih AI", target: "1 juta", progress: 41 },
+  { domain: "Bakat", name: "% pengurusan tertinggi dilatih kepimpinan AI", target: "100%", progress: 56 },
+  { domain: "Bakat", name: "Bilangan rakyat dilatih AI", target: "10 juta", progress: 38 },
+  { domain: "Penyampaian", name: "% perkhidmatan kerajaan menggunakan AI", target: "80%", progress: 46 },
+  { domain: "Penyampaian", name: "Bilangan use case AI sektor awam", target: "500+", progress: 58 },
+  { domain: "Impak Rakyat", name: "Pengurangan masa proses perkhidmatan", target: "50%", progress: 52 },
+  { domain: "Impak Rakyat", name: "Skor kepuasan rakyat", target: ">90%", progress: 69 },
+  { domain: "Produktiviti", name: "Penjimatan kos operasi kerajaan", target: "RM1 bilion", progress: 44 },
+  { domain: "Trust", name: "Indeks Trust Awam AI", target: ">85%", progress: 77 },
+  { domain: "Keterangkuman", name: "% akses AI inklusif", target: "100%", progress: 61 },
+  { domain: "Kelestarian", name: "% penggunaan AI hijau", target: "70%", progress: 35 },
 ];
 
 const ministries = [
-  { name: "Kementerian Digital", lead: "AI governance dan platform kerajaan", score: 88, status: "Advanced" },
-  { name: "JDN", lead: "Standard, integrasi dan delivery monitoring", score: 84, status: "Advanced" },
-  { name: "Kementerian Kesihatan", lead: "Healthcare AI dan triage perkhidmatan", score: 79, status: "Progressing" },
+  { name: "Kementerian Digital", lead: "Governance AI dan platform kerajaan", score: 88, status: "Advanced" },
+  { name: "JDN", lead: "Standard, integrasi dan pemantauan penyampaian", score: 84, status: "Advanced" },
+  { name: "Kementerian Kesihatan", lead: "AI kesihatan dan triage perkhidmatan", score: 79, status: "Progressing" },
   { name: "Kementerian Pendidikan", lead: "AI literacy pelajar dan guru", score: 75, status: "Progressing" },
-  { name: "Kementerian Kewangan", lead: "Predictive budgeting dan fraud detection", score: 72, status: "Progressing" },
+  { name: "Kementerian Kewangan", lead: "Belanjawan prediktif dan fraud detection", score: 72, status: "Progressing" },
   { name: "Jabatan Perdana Menteri", lead: "Koordinasi reformasi AI nasional", score: 69, status: "Progressing" },
-  { name: "Kementerian Pertanian", lead: "Crop analytics dan food security AI", score: 58, status: "Beginner" },
-  { name: "Kementerian Dalam Negeri", lead: "Enforcement analytics dan risk screening", score: 55, status: "Beginner" },
+  { name: "Kementerian Pertanian", lead: "Analitik tanaman dan food security AI", score: 58, status: "Beginner" },
+  { name: "Kementerian Dalam Negeri", lead: "Analitik penguatkuasaan dan risk screening", score: 55, status: "Beginner" },
 ];
 
 const ministryReports = [
   {
     name: "Kementerian Digital",
-    maturity: "Level 4 - Integrated",
+    maturity: "Tahap 4 - Bersepadu",
     score: 88,
     status: "Advanced",
     aiLead: "Dilantik",
@@ -44,19 +44,19 @@ const ministryReports = [
       ["AI Audit Trail", "Selesai"],
     ],
     projects: [
-      ["AI-GOV Integration Layer", "On Track", 82],
-      ["GovAI Service Assistant", "On Track", 72],
+      ["Lapisan Integrasi AI-GOV", "On Track", 82],
+      ["Pembantu Perkhidmatan GovAI", "On Track", 72],
       ["Model Registry Nasional", "Watch", 54],
     ],
     risks: [
       ["Model supply chain", "Medium", "Perlu assurance untuk model/API pihak ketiga."],
-      ["Data integration", "Medium", "Standard metadata dan ownership perlu dimuktamadkan."],
+      ["Integrasi data", "Medium", "Standard metadata dan pemilikan data perlu dimuktamadkan."],
     ],
-    intervention: "Percepat model registry dan standard AI security baseline rentas kementerian.",
+    intervention: "Percepat model registry dan standard garis dasar keselamatan AI rentas kementerian.",
   },
   {
     name: "JDN",
-    maturity: "Level 4 - Integrated",
+    maturity: "Tahap 4 - Bersepadu",
     score: 84,
     status: "Advanced",
     aiLead: "Dilantik",
@@ -71,19 +71,19 @@ const ministryReports = [
       ["AI Audit Trail", "Dalam pelaksanaan"],
     ],
     projects: [
-      ["GovAI Citizen Service Assistant", "On Track", 72],
-      ["AI Delivery Monitoring", "On Track", 76],
-      ["AI Security Baseline", "Watch", 61],
+      ["Pembantu Perkhidmatan Rakyat GovAI", "On Track", 72],
+      ["Pemantauan Penyampaian AI", "On Track", 76],
+      ["Garis Dasar Security AI", "Watch", 61],
     ],
     risks: [
       ["Prompt injection", "High", "Chatbot kerajaan perlu red-team dan guardrail."],
-      ["Data leakage", "High", "Audit log dan masking perlu diwajibkan."],
+      ["Data leakage", "High", "Audit log dan masking data perlu diwajibkan."],
     ],
     intervention: "Tetapkan kawalan minimum AI kerajaan dan jadual red-team untuk sistem utama.",
   },
   {
     name: "Kementerian Kesihatan",
-    maturity: "Level 3 - Operational",
+    maturity: "Tahap 3 - Operasi",
     score: 79,
     status: "Progressing",
     aiLead: "Dilantik",
@@ -99,18 +99,18 @@ const ministryReports = [
     ],
     projects: [
       ["AI Triage Klinik Kesihatan", "Watch", 58],
-      ["Medical Queue Prediction", "On Track", 66],
-      ["Clinical Knowledge Assistant", "Watch", 49],
+      ["Ramalan Giliran Perubatan", "On Track", 66],
+      ["Pembantu Pengetahuan Klinikal", "Watch", 49],
     ],
     risks: [
-      ["Clinical governance", "High", "Human review wajib untuk keputusan klinikal."],
-      ["Sensitive health data", "High", "Data kesihatan memerlukan kawalan akses ketat."],
+      ["Governance klinikal", "High", "Semakan manusia wajib untuk keputusan klinikal."],
+      ["Data kesihatan sensitif", "High", "Data kesihatan memerlukan kawalan akses ketat."],
     ],
-    intervention: "Lengkapkan clinical AI governance dan privacy impact assessment sebelum peluasan.",
+    intervention: "Lengkapkan governance AI klinikal dan penilaian impak privasi sebelum peluasan.",
   },
   {
     name: "Kementerian Pendidikan",
-    maturity: "Level 3 - Operational",
+    maturity: "Tahap 3 - Operasi",
     score: 75,
     status: "Progressing",
     aiLead: "Dilantik",
@@ -125,19 +125,19 @@ const ministryReports = [
       ["AI Audit Trail", "Belum lengkap"],
     ],
     projects: [
-      ["Adaptive Learning Nasional", "On Track", 67],
-      ["AI Teacher Assistant", "Watch", 55],
-      ["Student Support Analytics", "Watch", 51],
+      ["Pembelajaran Adaptif Nasional", "On Track", 67],
+      ["Pembantu Guru AI", "Watch", 55],
+      ["Analitik Sokongan Pelajar", "Watch", 51],
     ],
     risks: [
-      ["Digital divide", "Medium", "Akses luar bandar perlu dipantau."],
-      ["Student data privacy", "High", "Data pelajar perlu minimization dan consent controls."],
+      ["Jurang digital", "Medium", "Akses luar bandar perlu dipantau."],
+      ["Privasi data pelajar", "High", "Data pelajar perlu minimization dan kawalan persetujuan."],
     ],
     intervention: "Perkukuh kawalan data pelajar dan fokus AI literacy guru secara berfasa.",
   },
   {
     name: "Kementerian Kewangan",
-    maturity: "Level 3 - Operational",
+    maturity: "Tahap 3 - Operasi",
     score: 72,
     status: "Progressing",
     aiLead: "Dilantik",
@@ -152,19 +152,19 @@ const ministryReports = [
       ["AI Audit Trail", "Belum lengkap"],
     ],
     projects: [
-      ["Predictive Budgeting & Leakages Monitor", "On Track", 64],
+      ["Pemantauan Belanjawan Prediktif & Ketirisan", "On Track", 64],
       ["Fraud Detection Bantuan Kerajaan", "Watch", 51],
-      ["Procurement Risk Analytics", "Watch", 48],
+      ["Analitik Risiko Perolehan", "Watch", 48],
     ],
     risks: [
-      ["Model explainability", "Medium", "Keputusan fiskal perlu boleh diaudit."],
-      ["Bias monitoring", "Medium", "Fraud model perlu fairness testing."],
+      ["Kebolehjelasan model", "Medium", "Keputusan fiskal perlu boleh diaudit."],
+      ["Pemantauan bias", "Medium", "Model fraud perlu fairness testing."],
     ],
     intervention: "Tetapkan explainability standard untuk model kewangan dan bantuan rakyat.",
   },
   {
     name: "Jabatan Perdana Menteri",
-    maturity: "Level 3 - Operational",
+    maturity: "Tahap 3 - Operasi",
     score: 69,
     status: "Progressing",
     aiLead: "Dalam pelantikan",
@@ -179,19 +179,19 @@ const ministryReports = [
       ["AI Audit Trail", "Belum lengkap"],
     ],
     projects: [
-      ["National AI Reform Index", "Watch", 52],
-      ["Delivery Escalation Analytics", "On Track", 63],
-      ["Policy Intelligence Assistant", "Watch", 47],
+      ["Indeks Reformasi AI Nasional", "Watch", 52],
+      ["Analitik Eskalasi Penyampaian", "On Track", 63],
+      ["Pembantu Risikan Dasar", "Watch", 47],
     ],
     risks: [
-      ["Cross-agency ownership", "Medium", "Mandat data rentas agensi perlu jelas."],
-      ["Delivery fragmentation", "Medium", "Portfolio AI perlu standard intervensi."],
+      ["Pemilikan rentas agensi", "Medium", "Mandat data rentas agensi perlu jelas."],
+      ["Fragmentasi penyampaian", "Medium", "Portfolio AI perlu standard intervensi."],
     ],
-    intervention: "Muktamadkan AI Lead dan mandate portfolio review bulanan.",
+    intervention: "Muktamadkan AI Lead dan mandatkan semakan portfolio bulanan.",
   },
   {
     name: "Kementerian Pertanian",
-    maturity: "Level 2 - Adoption",
+    maturity: "Tahap 2 - Adoption",
     score: 58,
     status: "Beginner",
     aiLead: "Belum dilantik",
@@ -206,19 +206,19 @@ const ministryReports = [
       ["AI Audit Trail", "Belum lengkap"],
     ],
     projects: [
-      ["AI Crop Analytics", "Watch", 42],
-      ["Food Security Forecasting", "Watch", 46],
-      ["Farmer Advisory Assistant", "Delayed", 34],
+      ["Analitik Tanaman AI", "Watch", 42],
+      ["Ramalan Food Security", "Watch", 46],
+      ["Pembantu Nasihat Petani", "Delayed", 34],
     ],
     risks: [
-      ["Data quality", "High", "Data ladang dan daerah belum seragam."],
-      ["Adoption readiness", "Medium", "Latihan pegawai daerah perlu dipercepat."],
+      ["Kualiti data", "High", "Data ladang dan daerah belum seragam."],
+      ["Readiness adoption", "Medium", "Latihan pegawai daerah perlu dipercepat."],
     ],
     intervention: "Lantik AI Lead dan fokus satu use case berimpak tinggi untuk pilot nasional.",
   },
   {
     name: "Kementerian Dalam Negeri",
-    maturity: "Level 2 - Adoption",
+    maturity: "Tahap 2 - Adoption",
     score: 55,
     status: "Beginner",
     aiLead: "Belum dilantik",
@@ -233,13 +233,13 @@ const ministryReports = [
       ["AI Audit Trail", "Belum lengkap"],
     ],
     projects: [
-      ["Enforcement Risk Screening", "Watch", 45],
-      ["Border Analytics", "Delayed", 36],
-      ["Case Prioritisation Assistant", "Watch", 41],
+      ["Risk Screening Penguatkuasaan", "Watch", 45],
+      ["Analitik Sempadan", "Delayed", 36],
+      ["Pembantu Keutamaan Kes", "Watch", 41],
     ],
     risks: [
-      ["Civil liberties", "High", "Use case enforcement perlu governance dan oversight."],
-      ["Cybersecurity", "High", "Data sensitif perlu zero trust dan monitoring."],
+      ["Kebebasan awam", "High", "Use case penguatkuasaan perlu governance dan oversight."],
+      ["Cybersecurity", "High", "Data sensitif perlu zero trust dan pemantauan."],
     ],
     intervention: "Sediakan AI governance committee dan human oversight untuk semua use case enforcement.",
   },
@@ -247,31 +247,31 @@ const ministryReports = [
 
 const projects = [
   {
-    title: "GovAI Citizen Service Assistant",
-    sector: "Citizen Services",
+    title: "Pembantu Perkhidmatan Rakyat GovAI",
+    sector: "Perkhidmatan Rakyat",
     owner: "JDN",
     status: "On Track",
     impact: "Multilingual AI untuk pertanyaan kerajaan dan semakan status.",
     progress: 72,
-    risk: "Data integration",
+    risk: "Integrasi data",
   },
   {
     title: "AI Triage Klinik Kesihatan",
-    sector: "Healthcare",
+    sector: "Kesihatan",
     owner: "KKM",
     status: "Watch",
     impact: "Mengurangkan masa menunggu dan mempercepat triage kes ringan.",
     progress: 58,
-    risk: "Clinical governance",
+    risk: "Governance klinikal",
   },
   {
-    title: "Predictive Budgeting & Leakages Monitor",
-    sector: "Finance",
+    title: "Pemantauan Belanjawan Prediktif & Ketirisan",
+    sector: "Kewangan",
     owner: "MOF",
     status: "On Track",
     impact: "Mengesan corak perbelanjaan, ketirisan dan ruang penjimatan.",
     progress: 64,
-    risk: "Model explainability",
+    risk: "Kebolehjelasan model",
   },
   {
     title: "AI Talent Analytics HRMIS",
@@ -280,25 +280,25 @@ const projects = [
     status: "Delayed",
     impact: "Memetakan kemahiran AI penjawat awam dan keperluan latihan.",
     progress: 39,
-    risk: "Data quality",
+    risk: "Kualiti data",
   },
   {
     title: "Fraud Detection Bantuan Kerajaan",
-    sector: "Enforcement",
+    sector: "Penguatkuasaan",
     owner: "JPM / MOF",
     status: "Watch",
     impact: "Mengenal pasti anomali permohonan bantuan dan risiko salah guna.",
     progress: 51,
-    risk: "Bias monitoring",
+    risk: "Pemantauan bias",
   },
   {
-    title: "Adaptive Learning Nasional",
-    sector: "Education",
+    title: "Pembelajaran Adaptif Nasional",
+    sector: "Pendidikan",
     owner: "KPM / KPT",
     status: "On Track",
     impact: "Personalisasi pembelajaran dan sokongan AI literacy pelajar.",
     progress: 67,
-    risk: "Digital divide",
+    risk: "Jurang digital",
   },
 ];
 
@@ -323,24 +323,24 @@ const segments = [
 
 const risks = [
   { name: "Data leakage", level: "High", detail: "Integrasi data merentas agensi perlu audit trail dan kawalan akses." },
-  { name: "Bias AI", level: "Medium", detail: "Model keputusan rakyat perlu fairness testing dan human review." },
-  { name: "Deepfake threats", level: "Medium", detail: "Ancaman maklumat palsu terhadap komunikasi kerajaan." },
-  { name: "Cybersecurity incidents", level: "High", detail: "Sistem AI perlu zero trust, logging dan incident response." },
-  { name: "AI ethics complaints", level: "Medium", detail: "Saluran aduan dan semakan etika perlu tersedia." },
-  { name: "Compliance violations", level: "Low", detail: "Pematuhan PDPA dan standard keselamatan kerajaan." },
+  { name: "Bias AI", level: "Medium", detail: "Model keputusan rakyat perlu fairness testing dan semakan manusia." },
+  { name: "Ancaman deepfake", level: "Medium", detail: "Ancaman maklumat palsu terhadap komunikasi kerajaan." },
+  { name: "Insiden cybersecurity", level: "High", detail: "Sistem AI perlu zero trust, logging dan tindak balas insiden." },
+  { name: "Aduan etika AI", level: "Medium", detail: "Saluran aduan dan semakan etika perlu tersedia." },
+  { name: "Pelanggaran compliance", level: "Low", detail: "Pematuhan PDPA dan standard keselamatan kerajaan." },
 ];
 
 const alerts = [
   { title: "3 kementerian belum lantik AI Lead", detail: "Perlu keputusan pelantikan dan mandat pelaksanaan.", tone: "danger" },
   { title: "2 projek impak rakyat lewat milestone", detail: "Disyorkan escalation kepada delivery huddle mingguan.", tone: "warning" },
-  { title: "Trust index meningkat tetapi belum capai sasaran", detail: "Perlu komunikasi awam dan ketelusan outcome.", tone: "info" },
+  { title: "Indeks trust meningkat tetapi belum capai sasaran", detail: "Perlu komunikasi awam dan ketelusan outcome.", tone: "info" },
 ];
 
 const nationalStats = [
-  { label: "Jumlah Use Cases", value: "286", note: "58% menuju sasaran 500+" },
-  { label: "Kementerian Advanced", value: "2", note: "Daripada 8 entiti contoh" },
-  { label: "Projek On Track", value: "50%", note: "3 daripada 6 projek utama" },
-  { label: "Purata Readiness Negeri", value: "70%", note: "Berdasarkan AI literacy map" },
+  { label: "Jumlah Use Case", value: "286", note: "58% menuju sasaran 500+" },
+  { label: "Kementerian Maju", value: "2", note: "Daripada 8 entiti contoh" },
+  { label: "Projek Mengikut Jadual", value: "50%", note: "3 daripada 6 projek utama" },
+  { label: "Purata Readiness Negeri", value: "70%", note: "Berdasarkan peta AI literacy" },
   { label: "Latihan Rakyat", value: "3.8j", note: "Anggaran capaian terkumpul" },
   { label: "Skor Trust", value: "77%", note: "Belum capai sasaran >85%" },
   { label: "Risiko Tinggi", value: "2", note: "Data leakage dan cybersecurity" },
@@ -358,7 +358,7 @@ const useCaseTrend = [
 
 const riskStats = [
   { label: "Data Leakage", value: 78, detail: "Risiko integrasi data merentas agensi" },
-  { label: "Cybersecurity", value: 74, detail: "Keperluan zero trust dan incident response" },
+  { label: "Cybersecurity", value: 74, detail: "Keperluan zero trust dan tindak balas insiden" },
   { label: "Bias AI", value: 59, detail: "Perlu fairness testing untuk keputusan rakyat" },
   { label: "Deepfake", value: 52, detail: "Ancaman maklumat palsu dan reputasi kerajaan" },
   { label: "Etika AI", value: 48, detail: "Saluran aduan dan audit etika perlu jelas" },
@@ -366,10 +366,10 @@ const riskStats = [
 ];
 
 const securityMetrics = [
-  { label: "Critical AI Incidents", value: "0", note: "Dalam bulan semasa", tone: "success" },
-  { label: "High Risk Findings", value: "7", note: "Perlu remediation <30 hari", tone: "warning" },
-  { label: "AI Systems Assessed", value: "64%", note: "Telah melalui risk assessment", tone: "info" },
-  { label: "Data Controls Coverage", value: "71%", note: "Masking, access log, audit trail", tone: "warning" },
+  { label: "Insiden Kritikal AI", value: "0", note: "Dalam bulan semasa", tone: "success" },
+  { label: "Dapatan Risiko Tinggi", value: "7", note: "Perlu remediation <30 hari", tone: "warning" },
+  { label: "Sistem AI Dinilai", value: "64%", note: "Telah melalui risk assessment", tone: "info" },
+  { label: "Liputan Kawalan Data", value: "71%", note: "Masking, access log, audit trail", tone: "warning" },
 ];
 
 const securityThreats = [
@@ -380,46 +380,46 @@ const securityThreats = [
     owner: "JDN / CISO",
   },
   {
-    name: "Sensitive Data Leakage",
+    name: "Kebocoran Data Sensitif",
     level: "High",
     detail: "Risiko pendedahan PII, rekod bantuan, kesihatan atau maklumat dalaman.",
-    owner: "Data Owner",
+    owner: "Pemilik Data",
   },
   {
-    name: "Model Bias & Hallucination",
+    name: "Bias Model & Hallucination",
     level: "Medium",
     detail: "Output tidak tepat atau berat sebelah untuk keputusan berimpak rakyat.",
     owner: "AI Governance Lead",
   },
   {
-    name: "Deepfake & Synthetic Media",
+    name: "Deepfake & Media Sintetik",
     level: "Medium",
     detail: "Ancaman manipulasi komunikasi kerajaan dan keyakinan awam.",
-    owner: "Strategic Comms",
+    owner: "Komunikasi Strategik",
   },
   {
     name: "Model Supply Chain",
     level: "Medium",
     detail: "Kebergantungan kepada model, API atau dataset pihak ketiga tanpa assurance.",
-    owner: "Procurement / Security",
+    owner: "Perolehan / Security",
   },
 ];
 
 const securityControls = [
   { label: "AI Risk Assessment", value: 64 },
-  { label: "Data Classification", value: 71 },
-  { label: "Access Control & MFA", value: 82 },
+  { label: "Klasifikasi Data", value: 71 },
+  { label: "Kawalan Akses & MFA", value: 82 },
   { label: "Audit Trail & Logging", value: 68 },
-  { label: "Model Validation", value: 57 },
-  { label: "Human-in-the-loop Review", value: 61 },
-  { label: "Incident Response Playbook", value: 54 },
+  { label: "Validasi Model", value: 57 },
+  { label: "Semakan Human-in-the-loop", value: 61 },
+  { label: "Playbook Tindak Balas Insiden", value: 54 },
 ];
 
 const securityActions = [
-  { title: "Mandate AI security baseline", due: "30 hari", status: "Priority", detail: "Wajib untuk semua projek AI berimpak rakyat sebelum production." },
-  { title: "Tetapkan AI red-team exercise", due: "60 hari", status: "Watch", detail: "Ujian prompt injection, data leakage dan abuse case untuk sistem utama." },
-  { title: "Lengkapkan model registry", due: "90 hari", status: "Watch", detail: "Daftar model, dataset, owner, version, risk rating dan audit evidence." },
-  { title: "Aktifkan deepfake response protocol", due: "30 hari", status: "Priority", detail: "SOP pengesahan kandungan, komunikasi krisis dan takedown coordination." },
+  { title: "Mandatkan garis dasar security AI", due: "30 hari", status: "Priority", detail: "Wajib untuk semua projek AI berimpak rakyat sebelum production." },
+  { title: "Tetapkan latihan red-team AI", due: "60 hari", status: "Watch", detail: "Ujian prompt injection, data leakage dan abuse case untuk sistem utama." },
+  { title: "Lengkapkan model registry", due: "90 hari", status: "Watch", detail: "Daftar model, dataset, pemilik, versi, rating risiko dan bukti audit." },
+  { title: "Aktifkan protokol respons deepfake", due: "30 hari", status: "Priority", detail: "SOP pengesahan kandungan, komunikasi krisis dan koordinasi takedown." },
 ];
 
 const statusTone = {
@@ -434,6 +434,30 @@ const statusTone = {
   Low: "success",
   Priority: "danger",
 };
+
+const statusLabels = {
+  Advanced: "Maju",
+  Progressing: "Sedang Berjalan",
+  Beginner: "Permulaan",
+  "On Track": "Mengikut Jadual",
+  Watch: "Pantau",
+  Delayed: "Lewat",
+  High: "Tinggi",
+  Medium: "Sederhana",
+  Low: "Rendah",
+  Priority: "Keutamaan",
+};
+
+const toneLabels = {
+  success: "Stabil",
+  info: "Pantau",
+  warning: "Perlu Dipantau",
+  danger: "Kritikal",
+};
+
+function getStatusLabel(value) {
+  return statusLabels[value] || value;
+}
 
 function progressTone(value) {
   if (value >= 75) return "success";
@@ -491,7 +515,7 @@ function renderMinistries() {
             <strong>${ministry.name}</strong>
             <p>${ministry.lead}</p>
           </div>
-          <span class="status ${statusTone[ministry.status]}">${ministry.status}</span>
+          <span class="status ${statusTone[ministry.status]}">${getStatusLabel(ministry.status)}</span>
           ${createProgress(ministry.score)}
         </div>
       `,
@@ -524,10 +548,10 @@ function renderMinistryReport(ministryName = ministryReports[0].name) {
     <article class="ministry-profile-card">
       <span>Laporan Kementerian</span>
       <strong>${escapeHtml(report.name)}</strong>
-      <p>${escapeHtml(report.maturity)} · Status ${escapeHtml(report.status)} · AI Lead: ${escapeHtml(report.aiLead)}</p>
+      <p>${escapeHtml(report.maturity)} · Status ${escapeHtml(getStatusLabel(report.status))} · AI Lead: ${escapeHtml(report.aiLead)}</p>
     </article>
     <article class="ministry-report-stat">
-      <span>AI Readiness</span>
+      <span>Readiness AI</span>
       <strong>${report.score}%</strong>
       ${createProgress(report.score)}
     </article>
@@ -539,7 +563,7 @@ function renderMinistryReport(ministryName = ministryReports[0].name) {
     <article class="ministry-report-stat">
       <span>Pegawai Dilatih AI</span>
       <strong>${report.officersTrained}</strong>
-      <small>AI literacy dan leadership</small>
+      <small>AI literacy dan kepimpinan</small>
     </article>
     <article class="ministry-report-stat">
       <span>Impak Rakyat</span>
@@ -566,7 +590,7 @@ function renderMinistryReport(ministryName = ministryReports[0].name) {
         <div class="ministry-project-card">
           <div class="risk-topline">
             <strong>${escapeHtml(title)}</strong>
-            <span class="pill ${statusTone[status]}">${escapeHtml(status)}</span>
+            <span class="pill ${statusTone[status]}">${escapeHtml(getStatusLabel(status))}</span>
           </div>
           ${createProgress(progress)}
         </div>
@@ -581,7 +605,7 @@ function renderMinistryReport(ministryName = ministryReports[0].name) {
           <div class="ministry-risk-card">
             <div class="risk-topline">
               <strong>${escapeHtml(title)}</strong>
-              <span class="pill ${statusTone[level]}">${escapeHtml(level)}</span>
+              <span class="pill ${statusTone[level]}">${escapeHtml(getStatusLabel(level))}</span>
             </div>
             <p>${escapeHtml(detail)}</p>
           </div>
@@ -605,13 +629,13 @@ function renderProjects(sector = "all") {
         <div class="project-card">
           <div class="project-topline">
             <strong>${project.title}</strong>
-            <span class="pill ${statusTone[project.status]}">${project.status}</span>
+            <span class="pill ${statusTone[project.status]}">${getStatusLabel(project.status)}</span>
           </div>
           <span>${project.impact}</span>
           <div class="project-meta">
             <span>${project.sector}</span>
             <span>${project.owner}</span>
-            <span>Risk: ${project.risk}</span>
+            <span>Risiko: ${project.risk}</span>
           </div>
           <div style="margin-top: 12px">${createProgress(project.progress)}</div>
         </div>
@@ -662,7 +686,7 @@ function renderRisks() {
         <div class="risk-item">
           <div class="risk-topline">
             <strong>${risk.name}</strong>
-            <span class="pill ${statusTone[risk.level]}">${risk.level}</span>
+            <span class="pill ${statusTone[risk.level]}">${getStatusLabel(risk.level)}</span>
           </div>
           <span>${risk.detail}</span>
         </div>
@@ -763,7 +787,7 @@ function renderProjectStatusDonut() {
     .map(
       ([label, value, tone]) => `
         <div class="legend-row">
-          <span><i class="dot ${tone === "success" ? "green" : tone === "warning" ? "yellow" : "red"}"></i>${label}</span>
+          <span><i class="dot ${tone === "success" ? "green" : tone === "warning" ? "yellow" : "red"}"></i>${getStatusLabel(label)}</span>
           <strong>${value} projek</strong>
         </div>
       `,
@@ -811,7 +835,7 @@ function renderSecurityMetrics() {
           <span>${metric.label}</span>
           <strong>${metric.value}</strong>
           <small>${metric.note}</small>
-          <i class="pill ${metric.tone}">${metric.tone === "success" ? "Stable" : metric.tone === "info" ? "Monitor" : "Watch"}</i>
+          <i class="pill ${metric.tone}">${toneLabels[metric.tone]}</i>
         </article>
       `,
     )
@@ -826,10 +850,10 @@ function renderSecurityThreats() {
         <div class="security-threat-card">
           <div class="risk-topline">
             <strong>${threat.name}</strong>
-            <span class="pill ${statusTone[threat.level]}">${threat.level}</span>
+            <span class="pill ${statusTone[threat.level]}">${getStatusLabel(threat.level)}</span>
           </div>
           <p>${threat.detail}</p>
-          <span>Owner: ${threat.owner}</span>
+          <span>Pemilik: ${threat.owner}</span>
         </div>
       `,
     )
@@ -844,10 +868,10 @@ function renderSecurityActions() {
         <div class="security-action-card">
           <div class="risk-topline">
             <strong>${action.title}</strong>
-            <span class="pill ${statusTone[action.status]}">${action.status}</span>
+            <span class="pill ${statusTone[action.status]}">${getStatusLabel(action.status)}</span>
           </div>
           <p>${action.detail}</p>
-          <span>Due: ${action.due}</span>
+          <span>Tempoh: ${action.due}</span>
         </div>
       `,
     )
@@ -901,12 +925,12 @@ function getExecutiveSummaryText() {
   const beginnerMinistries = ministries.filter((ministry) => ministry.status === "Beginner").length;
   const delayedProjects = projects.filter((project) => project.status === "Delayed").length;
   const highRisks = risks.filter((risk) => risk.level === "High").map((risk) => risk.name).join(", ");
-  const trustKpi = kpis.find((item) => item.name === "AI Public Trust Index");
+  const trustKpi = kpis.find((item) => item.name === "Indeks Trust Awam AI");
 
   return (
-    `Ringkasan KSU KD: Skor nasional AI berada pada tahap Progressing dengan ${beginnerMinistries} kementerian masih pada tahap Beginner. ` +
+    `Ringkasan KSU KD: Skor nasional AI berada pada tahap sedang berjalan dengan ${beginnerMinistries} kementerian masih pada tahap permulaan. ` +
     `${delayedProjects} projek memerlukan intervensi segera, khususnya projek talent analytics yang tertangguh. ` +
-    `Risiko tertinggi ialah ${highRisks}. AI Public Trust Index kini berada pada ${trustKpi.progress}% daripada sasaran ${trustKpi.target}; ` +
+    `Risiko tertinggi ialah ${highRisks}. Indeks Trust Awam AI kini berada pada ${trustKpi.progress}% daripada sasaran ${trustKpi.target}; ` +
     "cadangan tindakan ialah mengadakan delivery huddle mingguan, mempercepat pelantikan AI Lead kementerian dan mewajibkan AI risk assessment bagi semua projek berimpak rakyat."
   );
 }
@@ -921,7 +945,7 @@ function buildPrintableReport(summary) {
   const onTrackProjects = projects.filter((project) => project.status === "On Track").length;
   const delayedProjects = projects.filter((project) => project.status === "Delayed").length;
   const highRisks = risks.filter((risk) => risk.level === "High");
-  const trustKpi = kpis.find((item) => item.name === "AI Public Trust Index");
+  const trustKpi = kpis.find((item) => item.name === "Indeks Trust Awam AI");
   const topMinistries = ministries
     .slice(0, 5)
     .map(
@@ -929,7 +953,7 @@ function buildPrintableReport(summary) {
         <tr>
           <td>${index + 1}</td>
           <td>${escapeHtml(ministry.name)}</td>
-          <td>${escapeHtml(ministry.status)}</td>
+          <td>${escapeHtml(getStatusLabel(ministry.status))}</td>
           <td>${ministry.score}%</td>
         </tr>
       `,
@@ -941,7 +965,7 @@ function buildPrintableReport(summary) {
         <tr>
           <td>${escapeHtml(project.title)}</td>
           <td>${escapeHtml(project.owner)}</td>
-          <td>${escapeHtml(project.status)}</td>
+          <td>${escapeHtml(getStatusLabel(project.status))}</td>
           <td>${project.progress}%</td>
           <td>${escapeHtml(project.risk)}</td>
         </tr>
@@ -954,42 +978,42 @@ function buildPrintableReport(summary) {
 
   report.innerHTML = `
     <div class="print-cover">
-      <span>AI-GOV Malaysia | KSU KD Executive Report</span>
+      <span>AI-GOV Malaysia | Laporan Eksekutif KSU KD</span>
       <h1>Ringkasan Prestasi Pelaksanaan AI Sektor Awam Malaysia</h1>
-      <p>Dokumen ini dijana daripada Modern Executive Command Centre untuk cetakan mesyuarat, edaran dalaman, atau simpanan PDF.</p>
+      <p>Dokumen ini dijana daripada dashboard prestasi AI untuk cetakan mesyuarat, edaran dalaman atau simpanan PDF.</p>
       <div class="print-meta">
         <div><strong>Tarikh jana</strong><br>${escapeHtml(generatedAt)}</div>
-        <div><strong>Status nasional</strong><br>Progressing</div>
+        <div><strong>Status nasional</strong><br>Sedang Berjalan</div>
         <div><strong>Skor nasional</strong><br>76.4 / 100</div>
       </div>
     </div>
 
     <div class="print-grid">
-      <div class="print-stat"><span>AI Use Cases</span><strong>286</strong><small>58% menuju sasaran 500+</small></div>
-      <div class="print-stat"><span>Kementerian Advanced</span><strong>${advancedMinistries}</strong><small>Daripada ${ministries.length} entiti contoh</small></div>
-      <div class="print-stat"><span>Projek On Track</span><strong>${onTrackProjects}/${projects.length}</strong><small>${delayedProjects} projek lewat</small></div>
-      <div class="print-stat"><span>AI Public Trust Index</span><strong>${trustKpi.progress}%</strong><small>Sasaran ${escapeHtml(trustKpi.target)}</small></div>
+      <div class="print-stat"><span>Use Case AI</span><strong>286</strong><small>58% menuju sasaran 500+</small></div>
+      <div class="print-stat"><span>Kementerian Maju</span><strong>${advancedMinistries}</strong><small>Daripada ${ministries.length} entiti contoh</small></div>
+      <div class="print-stat"><span>Projek Mengikut Jadual</span><strong>${onTrackProjects}/${projects.length}</strong><small>${delayedProjects} projek lewat</small></div>
+      <div class="print-stat"><span>Indeks Trust Awam AI</span><strong>${trustKpi.progress}%</strong><small>Sasaran ${escapeHtml(trustKpi.target)}</small></div>
     </div>
 
     <section class="print-section">
-      <span class="print-section-label">Executive Summary</span>
+      <span class="print-section-label">Ringkasan Eksekutif</span>
       <h2>Nota Untuk KSU KD</h2>
       <div class="print-box">${escapeHtml(summary)}</div>
     </section>
 
     <section class="print-section">
       <span class="print-section-label">Keputusan Diperlukan</span>
-      <h2>Attention Today</h2>
+      <h2>Perhatian Hari Ini</h2>
       <ul class="print-list">
         <li>Memuktamadkan pelantikan AI Lead bagi kementerian yang belum lengkap struktur governance.</li>
-        <li>Escalate projek impak rakyat yang lewat milestone ke delivery huddle KSU KD.</li>
+        <li>Bawa projek impak rakyat yang lewat milestone ke delivery huddle KSU KD.</li>
         <li>Mewajibkan AI risk assessment bagi projek berisiko tinggi sebelum peluasan nasional.</li>
       </ul>
     </section>
 
     <section class="print-section">
       <span class="print-section-label">Ranking</span>
-      <h2>Top AI Readiness Kementerian</h2>
+      <h2>Readiness AI Kementerian Tertinggi</h2>
       <table class="print-table">
         <thead>
           <tr><th>No.</th><th>Kementerian/Agensi</th><th>Status</th><th>Skor</th></tr>
@@ -999,18 +1023,18 @@ function buildPrintableReport(summary) {
     </section>
 
     <section class="print-section">
-      <span class="print-section-label">Implementation Tracker</span>
+      <span class="print-section-label">Penjejak Pelaksanaan</span>
       <h2>Status Projek AI Utama</h2>
       <table class="print-table">
         <thead>
-          <tr><th>Projek</th><th>Owner</th><th>Status</th><th>Progress</th><th>Risiko</th></tr>
+          <tr><th>Projek</th><th>Pemilik</th><th>Status</th><th>Kemajuan</th><th>Risiko</th></tr>
         </thead>
         <tbody>${projectRows}</tbody>
       </table>
     </section>
 
     <section class="print-section">
-      <span class="print-section-label">Risk & Trust</span>
+      <span class="print-section-label">Risiko & Trust</span>
       <h2>Risiko Tahap Tinggi</h2>
       <ul class="print-list">${riskItems}</ul>
       <p class="print-note">Nota: Untuk simpan sebagai PDF, pilih destinasi "Save as PDF" dalam dialog print browser.</p>
@@ -1020,9 +1044,9 @@ function buildPrintableReport(summary) {
       <span class="print-section-label">Security AI</span>
       <h2>Keutamaan Keselamatan AI</h2>
       <ul class="print-list">
-        <li>AI Security Posture berada pada 72% dan memerlukan pengukuhan kawalan model validation serta incident response playbook.</li>
-        <li>Ancaman utama ialah prompt injection, sensitive data leakage, deepfake dan model supply chain.</li>
-        <li>Cadangan tindakan: mandate AI security baseline, red-team exercise dan model registry nasional.</li>
+        <li>Postur Security AI berada pada 72% dan memerlukan pengukuhan kawalan validasi model serta playbook tindak balas insiden.</li>
+        <li>Ancaman utama ialah prompt injection, data leakage sensitif, deepfake dan model supply chain.</li>
+        <li>Cadangan tindakan: mandatkan garis dasar security AI, latihan red-team dan model registry nasional.</li>
       </ul>
     </section>
   `;
