@@ -2322,6 +2322,160 @@ tr:last-child td {
   backdrop-filter: none;
 }
 
+.ministry-report-dashboard {
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid #e5edf6;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(40, 168, 199, 0.08), transparent 24rem),
+    #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.ministry-report-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.4fr) repeat(4, minmax(140px, 0.65fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.ministry-report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.ministry-report-grid .wide {
+  grid-column: 1 / -1;
+}
+
+.ministry-profile-card,
+.ministry-report-stat,
+.governance-row,
+.ministry-project-card,
+.ministry-risk-card {
+  border: 1px solid #e5edf6;
+  border-radius: 16px;
+  background: #f8fafc;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.ministry-profile-card,
+.ministry-report-stat {
+  padding: 18px;
+}
+
+.ministry-profile-card:hover,
+.ministry-report-stat:hover,
+.governance-row:hover,
+.ministry-project-card:hover,
+.ministry-risk-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbdcf8;
+  background: #ffffff;
+  box-shadow: 0 18px 38px rgba(29, 55, 90, 0.1);
+}
+
+.ministry-profile-card span,
+.ministry-report-stat span,
+.ministry-risk-card span {
+  color: #7a8699;
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.ministry-profile-card strong {
+  display: block;
+  margin-top: 10px;
+  color: #111827;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  letter-spacing: -0.05em;
+}
+
+.ministry-profile-card p,
+.ministry-risk-card p {
+  color: #536173;
+  line-height: 1.5;
+}
+
+.ministry-report-stat strong {
+  display: block;
+  margin-top: 10px;
+  color: #111827;
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+}
+
+.ministry-report-stat small {
+  display: block;
+  margin-top: 8px;
+  color: #7a8699;
+  line-height: 1.4;
+}
+
+.governance-checklist,
+.ministry-project-list,
+.ministry-risk-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.governance-row,
+.ministry-project-card,
+.ministry-risk-card {
+  padding: 14px;
+}
+
+.governance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.governance-row span {
+  color: #536173;
+  font-weight: 750;
+}
+
+.ministry-risk-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ministry-risk-card.intervention {
+  background: #eaf2ff;
+  border-color: #d7e5fb;
+}
+
+.ministry-risk-card.intervention strong {
+  display: block;
+  margin-top: 8px;
+  color: #2459bd;
+  line-height: 1.45;
+}
+
+@media (max-width: 1180px) {
+  .ministry-report-hero,
+  .ministry-report-grid,
+  .ministry-risk-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .ministry-report-hero,
+  .ministry-report-grid,
+  .ministry-risk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @page {
   size: A4;
   margin: 14mm;

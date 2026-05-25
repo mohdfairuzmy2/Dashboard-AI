@@ -22,6 +22,7 @@ http://localhost:8000
 - Statistik AI Nasional dengan graf trend, donut status projek dan risk index
 - Scorecard KPI Nasional AI 2030
 - Ranking AI Readiness Kementerian
+- Laporan Kementerian dengan drill-down governance, projek, risiko dan intervensi
 - AI Implementation Tracker
 - AI Rakyat Readiness Index
 - Security AI Dashboard untuk AI security posture, threat intelligence, control coverage dan action queue

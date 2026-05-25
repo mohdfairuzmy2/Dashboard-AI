@@ -26,6 +26,225 @@ const ministries = [
   { name: "Kementerian Dalam Negeri", lead: "Enforcement analytics dan risk screening", score: 55, status: "Beginner" },
 ];
 
+const ministryReports = [
+  {
+    name: "Kementerian Digital",
+    maturity: "Level 4 - Integrated",
+    score: 88,
+    status: "Advanced",
+    aiLead: "Dilantik",
+    activeProjects: 14,
+    officersTrained: "68%",
+    citizenImpact: "Tinggi",
+    governance: [
+      ["AI Policy", "Selesai"],
+      ["AI Governance Committee", "Selesai"],
+      ["Chief AI Officer / AI Lead", "Selesai"],
+      ["AI Risk Assessment", "Dalam pelaksanaan"],
+      ["AI Audit Trail", "Selesai"],
+    ],
+    projects: [
+      ["AI-GOV Integration Layer", "On Track", 82],
+      ["GovAI Service Assistant", "On Track", 72],
+      ["Model Registry Nasional", "Watch", 54],
+    ],
+    risks: [
+      ["Model supply chain", "Medium", "Perlu assurance untuk model/API pihak ketiga."],
+      ["Data integration", "Medium", "Standard metadata dan ownership perlu dimuktamadkan."],
+    ],
+    intervention: "Percepat model registry dan standard AI security baseline rentas kementerian.",
+  },
+  {
+    name: "JDN",
+    maturity: "Level 4 - Integrated",
+    score: 84,
+    status: "Advanced",
+    aiLead: "Dilantik",
+    activeProjects: 11,
+    officersTrained: "64%",
+    citizenImpact: "Tinggi",
+    governance: [
+      ["AI Policy", "Selesai"],
+      ["AI Governance Committee", "Selesai"],
+      ["Chief AI Officer / AI Lead", "Selesai"],
+      ["AI Risk Assessment", "Selesai"],
+      ["AI Audit Trail", "Dalam pelaksanaan"],
+    ],
+    projects: [
+      ["GovAI Citizen Service Assistant", "On Track", 72],
+      ["AI Delivery Monitoring", "On Track", 76],
+      ["AI Security Baseline", "Watch", 61],
+    ],
+    risks: [
+      ["Prompt injection", "High", "Chatbot kerajaan perlu red-team dan guardrail."],
+      ["Data leakage", "High", "Audit log dan masking perlu diwajibkan."],
+    ],
+    intervention: "Tetapkan kawalan minimum AI kerajaan dan jadual red-team untuk sistem utama.",
+  },
+  {
+    name: "Kementerian Kesihatan",
+    maturity: "Level 3 - Operational",
+    score: 79,
+    status: "Progressing",
+    aiLead: "Dilantik",
+    activeProjects: 9,
+    officersTrained: "52%",
+    citizenImpact: "Tinggi",
+    governance: [
+      ["AI Policy", "Dalam pelaksanaan"],
+      ["AI Governance Committee", "Selesai"],
+      ["Chief AI Officer / AI Lead", "Selesai"],
+      ["AI Risk Assessment", "Dalam pelaksanaan"],
+      ["AI Audit Trail", "Belum lengkap"],
+    ],
+    projects: [
+      ["AI Triage Klinik Kesihatan", "Watch", 58],
+      ["Medical Queue Prediction", "On Track", 66],
+      ["Clinical Knowledge Assistant", "Watch", 49],
+    ],
+    risks: [
+      ["Clinical governance", "High", "Human review wajib untuk keputusan klinikal."],
+      ["Sensitive health data", "High", "Data kesihatan memerlukan kawalan akses ketat."],
+    ],
+    intervention: "Lengkapkan clinical AI governance dan privacy impact assessment sebelum peluasan.",
+  },
+  {
+    name: "Kementerian Pendidikan",
+    maturity: "Level 3 - Operational",
+    score: 75,
+    status: "Progressing",
+    aiLead: "Dilantik",
+    activeProjects: 10,
+    officersTrained: "57%",
+    citizenImpact: "Sederhana Tinggi",
+    governance: [
+      ["AI Policy", "Dalam pelaksanaan"],
+      ["AI Governance Committee", "Selesai"],
+      ["Chief AI Officer / AI Lead", "Selesai"],
+      ["AI Risk Assessment", "Belum lengkap"],
+      ["AI Audit Trail", "Belum lengkap"],
+    ],
+    projects: [
+      ["Adaptive Learning Nasional", "On Track", 67],
+      ["AI Teacher Assistant", "Watch", 55],
+      ["Student Support Analytics", "Watch", 51],
+    ],
+    risks: [
+      ["Digital divide", "Medium", "Akses luar bandar perlu dipantau."],
+      ["Student data privacy", "High", "Data pelajar perlu minimization dan consent controls."],
+    ],
+    intervention: "Perkukuh kawalan data pelajar dan fokus AI literacy guru secara berfasa.",
+  },
+  {
+    name: "Kementerian Kewangan",
+    maturity: "Level 3 - Operational",
+    score: 72,
+    status: "Progressing",
+    aiLead: "Dilantik",
+    activeProjects: 8,
+    officersTrained: "49%",
+    citizenImpact: "Sederhana",
+    governance: [
+      ["AI Policy", "Selesai"],
+      ["AI Governance Committee", "Dalam pelaksanaan"],
+      ["Chief AI Officer / AI Lead", "Selesai"],
+      ["AI Risk Assessment", "Dalam pelaksanaan"],
+      ["AI Audit Trail", "Belum lengkap"],
+    ],
+    projects: [
+      ["Predictive Budgeting & Leakages Monitor", "On Track", 64],
+      ["Fraud Detection Bantuan Kerajaan", "Watch", 51],
+      ["Procurement Risk Analytics", "Watch", 48],
+    ],
+    risks: [
+      ["Model explainability", "Medium", "Keputusan fiskal perlu boleh diaudit."],
+      ["Bias monitoring", "Medium", "Fraud model perlu fairness testing."],
+    ],
+    intervention: "Tetapkan explainability standard untuk model kewangan dan bantuan rakyat.",
+  },
+  {
+    name: "Jabatan Perdana Menteri",
+    maturity: "Level 3 - Operational",
+    score: 69,
+    status: "Progressing",
+    aiLead: "Dalam pelantikan",
+    activeProjects: 7,
+    officersTrained: "46%",
+    citizenImpact: "Sederhana",
+    governance: [
+      ["AI Policy", "Dalam pelaksanaan"],
+      ["AI Governance Committee", "Selesai"],
+      ["Chief AI Officer / AI Lead", "Dalam pelantikan"],
+      ["AI Risk Assessment", "Belum lengkap"],
+      ["AI Audit Trail", "Belum lengkap"],
+    ],
+    projects: [
+      ["National AI Reform Index", "Watch", 52],
+      ["Delivery Escalation Analytics", "On Track", 63],
+      ["Policy Intelligence Assistant", "Watch", 47],
+    ],
+    risks: [
+      ["Cross-agency ownership", "Medium", "Mandat data rentas agensi perlu jelas."],
+      ["Delivery fragmentation", "Medium", "Portfolio AI perlu standard intervensi."],
+    ],
+    intervention: "Muktamadkan AI Lead dan mandate portfolio review bulanan.",
+  },
+  {
+    name: "Kementerian Pertanian",
+    maturity: "Level 2 - Adoption",
+    score: 58,
+    status: "Beginner",
+    aiLead: "Belum dilantik",
+    activeProjects: 4,
+    officersTrained: "28%",
+    citizenImpact: "Sederhana",
+    governance: [
+      ["AI Policy", "Belum lengkap"],
+      ["AI Governance Committee", "Dalam pelaksanaan"],
+      ["Chief AI Officer / AI Lead", "Belum dilantik"],
+      ["AI Risk Assessment", "Belum lengkap"],
+      ["AI Audit Trail", "Belum lengkap"],
+    ],
+    projects: [
+      ["AI Crop Analytics", "Watch", 42],
+      ["Food Security Forecasting", "Watch", 46],
+      ["Farmer Advisory Assistant", "Delayed", 34],
+    ],
+    risks: [
+      ["Data quality", "High", "Data ladang dan daerah belum seragam."],
+      ["Adoption readiness", "Medium", "Latihan pegawai daerah perlu dipercepat."],
+    ],
+    intervention: "Lantik AI Lead dan fokus satu use case berimpak tinggi untuk pilot nasional.",
+  },
+  {
+    name: "Kementerian Dalam Negeri",
+    maturity: "Level 2 - Adoption",
+    score: 55,
+    status: "Beginner",
+    aiLead: "Belum dilantik",
+    activeProjects: 5,
+    officersTrained: "31%",
+    citizenImpact: "Sederhana",
+    governance: [
+      ["AI Policy", "Belum lengkap"],
+      ["AI Governance Committee", "Dalam pelaksanaan"],
+      ["Chief AI Officer / AI Lead", "Belum dilantik"],
+      ["AI Risk Assessment", "Belum lengkap"],
+      ["AI Audit Trail", "Belum lengkap"],
+    ],
+    projects: [
+      ["Enforcement Risk Screening", "Watch", 45],
+      ["Border Analytics", "Delayed", 36],
+      ["Case Prioritisation Assistant", "Watch", 41],
+    ],
+    risks: [
+      ["Civil liberties", "High", "Use case enforcement perlu governance dan oversight."],
+      ["Cybersecurity", "High", "Data sensitif perlu zero trust dan monitoring."],
+    ],
+    intervention: "Sediakan AI governance committee dan human oversight untuk semua use case enforcement.",
+  },
+];
+
 const projects = [
   {
     title: "GovAI Citizen Service Assistant",
@@ -278,6 +497,102 @@ function renderMinistries() {
       `,
     )
     .join("");
+}
+
+function populateMinistryReportSelect() {
+  const select = document.getElementById("ministryReportSelect");
+
+  ministryReports.forEach((ministry) => {
+    const option = document.createElement("option");
+    option.value = ministry.name;
+    option.textContent = ministry.name;
+    select.appendChild(option);
+  });
+
+  select.value = ministryReports[0].name;
+  select.addEventListener("change", (event) => renderMinistryReport(event.target.value));
+}
+
+function renderMinistryReport(ministryName = ministryReports[0].name) {
+  const report = ministryReports.find((item) => item.name === ministryName) || ministryReports[0];
+  const hero = document.getElementById("ministryReportHero");
+  const governanceList = document.getElementById("ministryGovernanceList");
+  const projectList = document.getElementById("ministryProjectList");
+  const riskGrid = document.getElementById("ministryRiskGrid");
+
+  hero.innerHTML = `
+    <article class="ministry-profile-card">
+      <span>Laporan Kementerian</span>
+      <strong>${escapeHtml(report.name)}</strong>
+      <p>${escapeHtml(report.maturity)} · Status ${escapeHtml(report.status)} · AI Lead: ${escapeHtml(report.aiLead)}</p>
+    </article>
+    <article class="ministry-report-stat">
+      <span>AI Readiness</span>
+      <strong>${report.score}%</strong>
+      ${createProgress(report.score)}
+    </article>
+    <article class="ministry-report-stat">
+      <span>Projek AI Aktif</span>
+      <strong>${report.activeProjects}</strong>
+      <small>Portfolio kementerian</small>
+    </article>
+    <article class="ministry-report-stat">
+      <span>Pegawai Dilatih AI</span>
+      <strong>${report.officersTrained}</strong>
+      <small>AI literacy dan leadership</small>
+    </article>
+    <article class="ministry-report-stat">
+      <span>Impak Rakyat</span>
+      <strong>${report.citizenImpact}</strong>
+      <small>Anggaran outcome semasa</small>
+    </article>
+  `;
+
+  governanceList.innerHTML = report.governance
+    .map(([item, status]) => {
+      const tone = status === "Selesai" ? "success" : status.includes("Belum") ? "danger" : "warning";
+      return `
+        <div class="governance-row">
+          <span>${escapeHtml(item)}</span>
+          <strong class="pill ${tone}">${escapeHtml(status)}</strong>
+        </div>
+      `;
+    })
+    .join("");
+
+  projectList.innerHTML = report.projects
+    .map(
+      ([title, status, progress]) => `
+        <div class="ministry-project-card">
+          <div class="risk-topline">
+            <strong>${escapeHtml(title)}</strong>
+            <span class="pill ${statusTone[status]}">${escapeHtml(status)}</span>
+          </div>
+          ${createProgress(progress)}
+        </div>
+      `,
+    )
+    .join("");
+
+  riskGrid.innerHTML = `
+    ${report.risks
+      .map(
+        ([title, level, detail]) => `
+          <div class="ministry-risk-card">
+            <div class="risk-topline">
+              <strong>${escapeHtml(title)}</strong>
+              <span class="pill ${statusTone[level]}">${escapeHtml(level)}</span>
+            </div>
+            <p>${escapeHtml(detail)}</p>
+          </div>
+        `,
+      )
+      .join("")}
+    <div class="ministry-risk-card intervention">
+      <span>Cadangan Intervensi KSU KD</span>
+      <strong>${escapeHtml(report.intervention)}</strong>
+    </div>
+  `;
 }
 
 function renderProjects(sector = "all") {
@@ -769,6 +1084,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAlerts();
   renderKpis();
   renderMinistries();
+  populateMinistryReportSelect();
+  renderMinistryReport();
   renderProjects();
   renderNationalStatistics();
   renderSecurityDashboard();
